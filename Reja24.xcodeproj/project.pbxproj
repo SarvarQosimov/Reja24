@@ -7,15 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF1E71542BDC111B00051FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71532BDC111B00051FFD /* AppDelegate.swift */; };
-		FF1E71562BDC111B00051FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71552BDC111B00051FFD /* SceneDelegate.swift */; };
-		FF1E71582BDC111B00051FFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71572BDC111B00051FFD /* ViewController.swift */; };
-		FF1E715B2BDC111B00051FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1E71592BDC111B00051FFD /* Main.storyboard */; };
+		19C9DF9025F1DDFCAFB876B2 /* Pods_Reja24.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD1704BB78C441036F4A4AC /* Pods_Reja24.framework */; };
+		61FC4962839D0BAA6ADDC8B7 /* Pods_Reja24Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8638645D8CDA3BC39C32D0AD /* Pods_Reja24Tests.framework */; };
+		B67253707EF9165481D57BFB /* Pods_Reja24_Reja24UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20904F515B40F9778804F56 /* Pods_Reja24_Reja24UITests.framework */; };
 		FF1E715D2BDC111D00051FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1E715C2BDC111D00051FFD /* Assets.xcassets */; };
 		FF1E71602BDC111D00051FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1E715E2BDC111D00051FFD /* LaunchScreen.storyboard */; };
 		FF1E716B2BDC111E00051FFD /* Reja24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E716A2BDC111E00051FFD /* Reja24Tests.swift */; };
 		FF1E71752BDC111E00051FFD /* Reja24UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71742BDC111E00051FFD /* Reja24UITests.swift */; };
 		FF1E71772BDC111E00051FFD /* Reja24UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71762BDC111E00051FFD /* Reja24UITestsLaunchTests.swift */; };
+		FF1E71862BDC130100051FFD /* Reja 24 image 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1E71842BDC130100051FFD /* Reja 24 image 1.png */; };
+		FF1E71872BDC130100051FFD /* Reja 24 image 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1E71852BDC130100051FFD /* Reja 24 image 2.png */; };
+		FF1E718F2BDC134600051FFD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E718D2BDC134600051FFD /* Alert.swift */; };
+		FF1E71902BDC134600051FFD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E718E2BDC134600051FFD /* Constants.swift */; };
+		FF1E71942BDC137C00051FFD /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71922BDC137C00051FFD /* LocalNotificationManager.swift */; };
+		FF1E71952BDC137C00051FFD /* SharedMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71932BDC137C00051FFD /* SharedMananger.swift */; };
+		FF1E719B2BDC139500051FFD /* LanguageMananger+uz.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71972BDC139400051FFD /* LanguageMananger+uz.swift */; };
+		FF1E719C2BDC139500051FFD /* LanguageMananger+ru.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71982BDC139500051FFD /* LanguageMananger+ru.swift */; };
+		FF1E719D2BDC139500051FFD /* LanguageMananger+eng.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71992BDC139500051FFD /* LanguageMananger+eng.swift */; };
+		FF1E719E2BDC139500051FFD /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E719A2BDC139500051FFD /* SetLanguage.swift */; };
+		FF1E71A32BDC13B300051FFD /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71A02BDC13B200051FFD /* UIImage+extension.swift */; };
+		FF1E71A42BDC13B300051FFD /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71A12BDC13B300051FFD /* UIColor+extension.swift */; };
+		FF1E71A52BDC13B300051FFD /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71A22BDC13B300051FFD /* String+extension.swift */; };
+		FF1E71AA2BDC13D300051FFD /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71A72BDC13D300051FFD /* Protocols.swift */; };
+		FF1E71AB2BDC13D300051FFD /* Task_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71A82BDC13D300051FFD /* Task_Manager.xcdatamodeld */; };
+		FF1E71B42BDC145600051FFD /* MainVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B12BDC145600051FFD /* MainVC+Protocol.swift */; };
+		FF1E71B52BDC145600051FFD /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */; };
+		FF1E71B62BDC145600051FFD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B32BDC145600051FFD /* MainVC.swift */; };
+		FF1E71B82BDC146800051FFD /* MainVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B72BDC146800051FFD /* MainVC+setupViews.swift */; };
+		FF1E71BD2BDC148C00051FFD /* FlaggedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */; };
+		FF1E71BE2BDC148C00051FFD /* FlaggedTasks+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */; };
+		FF1E71BF2BDC148C00051FFD /* FlaggedTasks+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */; };
+		FF1E71C12BDC149A00051FFD /* FlaggedTasks+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */; };
+		FF1E71CC2BDC14F800051FFD /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C22BDC14F700051FFD /* Tabbar.swift */; };
+		FF1E71CD2BDC14F800051FFD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C32BDC14F700051FFD /* ProfileVC.swift */; };
+		FF1E71CE2BDC14F800051FFD /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C42BDC14F700051FFD /* AddTaskVC.swift */; };
+		FF1E71CF2BDC14F800051FFD /* ChooseLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C52BDC14F700051FFD /* ChooseLanguageVC.swift */; };
+		FF1E71D02BDC14F800051FFD /* SideMenuTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C62BDC14F700051FFD /* SideMenuTV.swift */; };
+		FF1E71D12BDC14F800051FFD /* SetTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C72BDC14F700051FFD /* SetTimer.swift */; };
+		FF1E71D22BDC14F800051FFD /* TaskDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C82BDC14F800051FFD /* TaskDetailVC.swift */; };
+		FF1E71D32BDC14F800051FFD /* CreateNewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C92BDC14F800051FFD /* CreateNewCategory.swift */; };
+		FF1E71D42BDC14F800051FFD /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71CA2BDC14F800051FFD /* StartVC.swift */; };
+		FF1E71D52BDC14F800051FFD /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71CB2BDC14F800051FFD /* SettingsVC.swift */; };
+		FF1E71E32BDC152C00051FFD /* ChooseCategoriesVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71D62BDC152A00051FFD /* ChooseCategoriesVC+setupViews.swift */; };
+		FF1E71E42BDC152C00051FFD /* AddTaskVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71D72BDC152A00051FFD /* AddTaskVC+setupViews.swift */; };
+		FF1E71E52BDC152C00051FFD /* TasksVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71D82BDC152A00051FFD /* TasksVC+setupViews.swift */; };
+		FF1E71E62BDC152C00051FFD /* StartVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71D92BDC152A00051FFD /* StartVC+setupViews.swift */; };
+		FF1E71E72BDC152C00051FFD /* CategoryVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DA2BDC152B00051FFD /* CategoryVC+setupViews.swift */; };
+		FF1E71E82BDC152C00051FFD /* TaskDetailVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DB2BDC152B00051FFD /* TaskDetailVC+setupViews.swift */; };
+		FF1E71E92BDC152C00051FFD /* AllFolders+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DC2BDC152B00051FFD /* AllFolders+setupViews.swift */; };
+		FF1E71EA2BDC152C00051FFD /* SearchTasksVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DD2BDC152B00051FFD /* SearchTasksVC+setupViews.swift */; };
+		FF1E71EB2BDC152C00051FFD /* FolderVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DE2BDC152B00051FFD /* FolderVC+setupViews.swift */; };
+		FF1E71EC2BDC152C00051FFD /* SetTimer+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71DF2BDC152B00051FFD /* SetTimer+setupViews.swift */; };
+		FF1E71ED2BDC152C00051FFD /* ChooseLanguageVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71E02BDC152B00051FFD /* ChooseLanguageVC+setupViews.swift */; };
+		FF1E71EE2BDC152C00051FFD /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71E12BDC152B00051FFD /* LanguageView.swift */; };
+		FF1E71EF2BDC152C00051FFD /* CreateNewCategory+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71E22BDC152B00051FFD /* CreateNewCategory+setupViews.swift */; };
+		FF1E71F42BDC160200051FFD /* SearchTasks+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71F12BDC160200051FFD /* SearchTasks+Protocol.swift */; };
+		FF1E71F52BDC160200051FFD /* SearchTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71F22BDC160200051FFD /* SearchTasksVC.swift */; };
+		FF1E71F62BDC160200051FFD /* SearchTasksVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71F32BDC160200051FFD /* SearchTasksVC+TableView.swift */; };
+		FF1E71FA2BDC163500051FFD /* ChooseCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71F82BDC163500051FFD /* ChooseCategoriesVC.swift */; };
+		FF1E71FB2BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71F92BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift */; };
+		FF1E72002BDC169700051FFD /* FolderVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71FD2BDC169700051FFD /* FolderVC+CollectionView.swift */; };
+		FF1E72012BDC169700051FFD /* FolderVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71FE2BDC169700051FFD /* FolderVC+Protocol.swift */; };
+		FF1E72022BDC169700051FFD /* FolderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71FF2BDC169700051FFD /* FolderVC.swift */; };
+		FF1E72062BDC16D000051FFD /* AllFolders+collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72042BDC16D000051FFD /* AllFolders+collectionView.swift */; };
+		FF1E72072BDC16D000051FFD /* AllFoldersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72052BDC16D000051FFD /* AllFoldersVC.swift */; };
+		FF1E720C2BDC170C00051FFD /* TasksVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72092BDC170B00051FFD /* TasksVC+TableView.swift */; };
+		FF1E720D2BDC170C00051FFD /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E720A2BDC170B00051FFD /* TasksVC.swift */; };
+		FF1E720E2BDC170C00051FFD /* TasksVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E720B2BDC170C00051FFD /* TasksVC+Protocol.swift */; };
+		FF1E72132BDC173400051FFD /* CategoryVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */; };
+		FF1E72142BDC173400051FFD /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72112BDC173400051FFD /* CategoryVC.swift */; };
+		FF1E72152BDC173400051FFD /* CategoryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */; };
+		FF1E721A2BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72172BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift */; };
+		FF1E721B2BDC175F00051FFD /* SchedualTasks+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72182BDC175F00051FFD /* SchedualTasks+TableView.swift */; };
+		FF1E721C2BDC175F00051FFD /* ScheduledTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72192BDC175F00051FFD /* ScheduledTasksVC.swift */; };
+		FF1E72272BDC187300051FFD /* SettingsVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72242BDC187300051FFD /* SettingsVC+setupViews.swift */; };
+		FF1E72282BDC187300051FFD /* ProfileVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72252BDC187300051FFD /* ProfileVC+setupViews.swift */; };
+		FF1E72292BDC187300051FFD /* SchedualTasks+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72262BDC187300051FFD /* SchedualTasks+setupViews.swift */; };
+		FF1E722E2BDC190B00051FFD /* TaskTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E722D2BDC190B00051FFD /* TaskTVC.swift */; };
+		FF1E72302BDC191500051FFD /* TaskTVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E722F2BDC191500051FFD /* TaskTVC+setupViews.swift */; };
+		FF1E72352BDC193B00051FFD /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72322BDC193B00051FFD /* MainTVC.swift */; };
+		FF1E72362BDC193B00051FFD /* MainTVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72332BDC193B00051FFD /* MainTVC+Protocol.swift */; };
+		FF1E72372BDC193B00051FFD /* MainTVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72342BDC193B00051FFD /* MainTVC+CollectionView.swift */; };
+		FF1E72392BDC194500051FFD /* MainTVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72382BDC194500051FFD /* MainTVC+setupViews.swift */; };
+		FF1E723E2BDCAD4300051FFD /* TasksForTodayTVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E723B2BDCAD4200051FFD /* TasksForTodayTVC+Protocol.swift */; };
+		FF1E723F2BDCAD4300051FFD /* TasksForTodayTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E723C2BDCAD4200051FFD /* TasksForTodayTVC.swift */; };
+		FF1E72402BDCAD4300051FFD /* TasksForTodayTVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E723D2BDCAD4300051FFD /* TasksForTodayTVC+TableView.swift */; };
+		FF1E72422BDCAD5100051FFD /* TasksForTodayTVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72412BDCAD5100051FFD /* TasksForTodayTVC+setupViews.swift */; };
+		FF1E72452BDCAD9200051FFD /* FolderCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72432BDCAD9200051FFD /* FolderCVC.swift */; };
+		FF1E72462BDCAD9200051FFD /* CategoryCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72442BDCAD9200051FFD /* CategoryCVC.swift */; };
+		FF1E72492BDCADB400051FFD /* CategoryCVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72472BDCADB400051FFD /* CategoryCVC+setupViews.swift */; };
+		FF1E724A2BDCADB400051FFD /* FolderCVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72482BDCADB400051FFD /* FolderCVC+setupViews.swift */; };
+		FF1E72512BDCAE2200051FFD /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E724E2BDCAE2200051FFD /* TasksViewModel.swift */; };
+		FF1E72522BDCAE2200051FFD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E724F2BDCAE2200051FFD /* CategoryViewModel.swift */; };
+		FF1E72532BDCAE2200051FFD /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72502BDCAE2200051FFD /* FolderViewModel.swift */; };
+		FF1E72552BDCAF4F00051FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */; };
+		FF1E72572BDCBFD400051FFD /* NotificationCenter+extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +122,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1AD1DD77A297563AD9F125 /* Pods-Reja24.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24.release.xcconfig"; path = "Target Support Files/Pods-Reja24/Pods-Reja24.release.xcconfig"; sourceTree = "<group>"; };
+		2CD1704BB78C441036F4A4AC /* Pods_Reja24.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reja24.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7A40CE7BAC1FEE6CE3C871 /* Pods-Reja24-Reja24UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24-Reja24UITests.debug.xcconfig"; path = "Target Support Files/Pods-Reja24-Reja24UITests/Pods-Reja24-Reja24UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		660BDEA182E2CEA1F0D20B45 /* Pods-Reja24Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24Tests.debug.xcconfig"; path = "Target Support Files/Pods-Reja24Tests/Pods-Reja24Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8638645D8CDA3BC39C32D0AD /* Pods_Reja24Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reja24Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20904F515B40F9778804F56 /* Pods_Reja24_Reja24UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reja24_Reja24UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CD55F857B78422184ED9B8 /* Pods-Reja24.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24.debug.xcconfig"; path = "Target Support Files/Pods-Reja24/Pods-Reja24.debug.xcconfig"; sourceTree = "<group>"; };
+		B89BD555913E0FFE2C964529 /* Pods-Reja24Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24Tests.release.xcconfig"; path = "Target Support Files/Pods-Reja24Tests/Pods-Reja24Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E5A24D14053F721E37BF20B7 /* Pods-Reja24-Reja24UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reja24-Reja24UITests.release.xcconfig"; path = "Target Support Files/Pods-Reja24-Reja24UITests/Pods-Reja24-Reja24UITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF1E71502BDC111B00051FFD /* Reja24.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reja24.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF1E71532BDC111B00051FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF1E71552BDC111B00051FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF1E71572BDC111B00051FFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FF1E715A2BDC111B00051FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF1E715C2BDC111D00051FFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF1E715F2BDC111D00051FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF1E71612BDC111D00051FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +140,96 @@
 		FF1E71702BDC111E00051FFD /* Reja24UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Reja24UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1E71742BDC111E00051FFD /* Reja24UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reja24UITests.swift; sourceTree = "<group>"; };
 		FF1E71762BDC111E00051FFD /* Reja24UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reja24UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF1E71842BDC130100051FFD /* Reja 24 image 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reja 24 image 1.png"; sourceTree = "<group>"; };
+		FF1E71852BDC130100051FFD /* Reja 24 image 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reja 24 image 2.png"; sourceTree = "<group>"; };
+		FF1E71892BDC132600051FFD /* StickySugary.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StickySugary.ttf; sourceTree = "<group>"; };
+		FF1E718A2BDC132600051FFD /* Monday.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Monday.otf; sourceTree = "<group>"; };
+		FF1E718B2BDC132600051FFD /* Psychedelic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Psychedelic.ttf; sourceTree = "<group>"; };
+		FF1E718D2BDC134600051FFD /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FF1E718E2BDC134600051FFD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF1E71922BDC137C00051FFD /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		FF1E71932BDC137C00051FFD /* SharedMananger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMananger.swift; sourceTree = "<group>"; };
+		FF1E71972BDC139400051FFD /* LanguageMananger+uz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LanguageMananger+uz.swift"; sourceTree = "<group>"; };
+		FF1E71982BDC139500051FFD /* LanguageMananger+ru.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LanguageMananger+ru.swift"; sourceTree = "<group>"; };
+		FF1E71992BDC139500051FFD /* LanguageMananger+eng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LanguageMananger+eng.swift"; sourceTree = "<group>"; };
+		FF1E719A2BDC139500051FFD /* SetLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLanguage.swift; sourceTree = "<group>"; };
+		FF1E71A02BDC13B200051FFD /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		FF1E71A12BDC13B300051FFD /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		FF1E71A22BDC13B300051FFD /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		FF1E71A72BDC13D300051FFD /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		FF1E71A92BDC13D300051FFD /* Task_Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task_Manager.xcdatamodel; sourceTree = "<group>"; };
+		FF1E71B12BDC145600051FFD /* MainVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
+		FF1E71B32BDC145600051FFD /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FF1E71B72BDC146800051FFD /* MainVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaggedTasks.swift; sourceTree = "<group>"; };
+		FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+TableView.swift"; sourceTree = "<group>"; };
+		FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71C22BDC14F700051FFD /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		FF1E71C32BDC14F700051FFD /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		FF1E71C42BDC14F700051FFD /* AddTaskVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
+		FF1E71C52BDC14F700051FFD /* ChooseLanguageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageVC.swift; sourceTree = "<group>"; };
+		FF1E71C62BDC14F700051FFD /* SideMenuTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTV.swift; sourceTree = "<group>"; };
+		FF1E71C72BDC14F700051FFD /* SetTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimer.swift; sourceTree = "<group>"; };
+		FF1E71C82BDC14F800051FFD /* TaskDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailVC.swift; sourceTree = "<group>"; };
+		FF1E71C92BDC14F800051FFD /* CreateNewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewCategory.swift; sourceTree = "<group>"; };
+		FF1E71CA2BDC14F800051FFD /* StartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		FF1E71CB2BDC14F800051FFD /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		FF1E71D62BDC152A00051FFD /* ChooseCategoriesVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChooseCategoriesVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71D72BDC152A00051FFD /* AddTaskVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddTaskVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71D82BDC152A00051FFD /* TasksVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71D92BDC152A00051FFD /* StartVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DA2BDC152B00051FFD /* CategoryVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DB2BDC152B00051FFD /* TaskDetailVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DC2BDC152B00051FFD /* AllFolders+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AllFolders+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DD2BDC152B00051FFD /* SearchTasksVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchTasksVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DE2BDC152B00051FFD /* FolderVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FolderVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71DF2BDC152B00051FFD /* SetTimer+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SetTimer+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71E02BDC152B00051FFD /* ChooseLanguageVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChooseLanguageVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71E12BDC152B00051FFD /* LanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		FF1E71E22BDC152B00051FFD /* CreateNewCategory+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateNewCategory+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E71F12BDC160200051FFD /* SearchTasks+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchTasks+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E71F22BDC160200051FFD /* SearchTasksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTasksVC.swift; sourceTree = "<group>"; };
+		FF1E71F32BDC160200051FFD /* SearchTasksVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchTasksVC+TableView.swift"; sourceTree = "<group>"; };
+		FF1E71F82BDC163500051FFD /* ChooseCategoriesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCategoriesVC.swift; sourceTree = "<group>"; };
+		FF1E71F92BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChooseCategoriesVC+CollectionView.swift"; sourceTree = "<group>"; };
+		FF1E71FD2BDC169700051FFD /* FolderVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FolderVC+CollectionView.swift"; sourceTree = "<group>"; };
+		FF1E71FE2BDC169700051FFD /* FolderVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FolderVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E71FF2BDC169700051FFD /* FolderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderVC.swift; sourceTree = "<group>"; };
+		FF1E72042BDC16D000051FFD /* AllFolders+collectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AllFolders+collectionView.swift"; sourceTree = "<group>"; };
+		FF1E72052BDC16D000051FFD /* AllFoldersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllFoldersVC.swift; sourceTree = "<group>"; };
+		FF1E72092BDC170B00051FFD /* TasksVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksVC+TableView.swift"; sourceTree = "<group>"; };
+		FF1E720A2BDC170B00051FFD /* TasksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
+		FF1E720B2BDC170C00051FFD /* TasksVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E72112BDC173400051FFD /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryVC+CollectionView.swift"; sourceTree = "<group>"; };
+		FF1E72172BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScheduledTasksVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E72182BDC175F00051FFD /* SchedualTasks+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SchedualTasks+TableView.swift"; sourceTree = "<group>"; };
+		FF1E72192BDC175F00051FFD /* ScheduledTasksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledTasksVC.swift; sourceTree = "<group>"; };
+		FF1E72242BDC187300051FFD /* SettingsVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E72252BDC187300051FFD /* ProfileVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E72262BDC187300051FFD /* SchedualTasks+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SchedualTasks+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E722D2BDC190B00051FFD /* TaskTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTVC.swift; sourceTree = "<group>"; };
+		FF1E722F2BDC191500051FFD /* TaskTVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TaskTVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E72322BDC193B00051FFD /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
+		FF1E72332BDC193B00051FFD /* MainTVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainTVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E72342BDC193B00051FFD /* MainTVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainTVC+CollectionView.swift"; sourceTree = "<group>"; };
+		FF1E72382BDC194500051FFD /* MainTVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainTVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E723B2BDCAD4200051FFD /* TasksForTodayTVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksForTodayTVC+Protocol.swift"; sourceTree = "<group>"; };
+		FF1E723C2BDCAD4200051FFD /* TasksForTodayTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksForTodayTVC.swift; sourceTree = "<group>"; };
+		FF1E723D2BDCAD4300051FFD /* TasksForTodayTVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksForTodayTVC+TableView.swift"; sourceTree = "<group>"; };
+		FF1E72412BDCAD5100051FFD /* TasksForTodayTVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksForTodayTVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E72432BDCAD9200051FFD /* FolderCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCVC.swift; sourceTree = "<group>"; };
+		FF1E72442BDCAD9200051FFD /* CategoryCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCVC.swift; sourceTree = "<group>"; };
+		FF1E72472BDCADB400051FFD /* CategoryCVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryCVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E72482BDCADB400051FFD /* FolderCVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FolderCVC+setupViews.swift"; sourceTree = "<group>"; };
+		FF1E724E2BDCAE2200051FFD /* TasksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		FF1E724F2BDCAE2200051FFD /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		FF1E72502BDCAE2200051FFD /* FolderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
+		FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+extansion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C9DF9025F1DDFCAFB876B2 /* Pods_Reja24.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61FC4962839D0BAA6ADDC8B7 /* Pods_Reja24Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +253,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67253707EF9165481D57BFB /* Pods_Reja24_Reja24UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		123E70E5F871AF8D90F30D2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD55F857B78422184ED9B8 /* Pods-Reja24.debug.xcconfig */,
+				0A1AD1DD77A297563AD9F125 /* Pods-Reja24.release.xcconfig */,
+				3A7A40CE7BAC1FEE6CE3C871 /* Pods-Reja24-Reja24UITests.debug.xcconfig */,
+				E5A24D14053F721E37BF20B7 /* Pods-Reja24-Reja24UITests.release.xcconfig */,
+				660BDEA182E2CEA1F0D20B45 /* Pods-Reja24Tests.debug.xcconfig */,
+				B89BD555913E0FFE2C964529 /* Pods-Reja24Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6038AE822280A9479FE2644A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CD1704BB78C441036F4A4AC /* Pods_Reja24.framework */,
+				A20904F515B40F9778804F56 /* Pods_Reja24_Reja24UITests.framework */,
+				8638645D8CDA3BC39C32D0AD /* Pods_Reja24Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FF1E71472BDC111B00051FFD = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +290,8 @@
 				FF1E71692BDC111E00051FFD /* Reja24Tests */,
 				FF1E71732BDC111E00051FFD /* Reja24UITests */,
 				FF1E71512BDC111B00051FFD /* Products */,
+				123E70E5F871AF8D90F30D2E /* Pods */,
+				6038AE822280A9479FE2644A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +308,14 @@
 		FF1E71522BDC111B00051FFD /* Reja24 */ = {
 			isa = PBXGroup;
 			children = (
-				FF1E71532BDC111B00051FFD /* AppDelegate.swift */,
-				FF1E71552BDC111B00051FFD /* SceneDelegate.swift */,
-				FF1E71572BDC111B00051FFD /* ViewController.swift */,
-				FF1E71592BDC111B00051FFD /* Main.storyboard */,
+				FF1E724D2BDCAE1400051FFD /* ViewModel */,
+				FF1E71AC2BDC13EE00051FFD /* Controllers */,
+				FF1E71A62BDC13C900051FFD /* Model */,
+				FF1E719F2BDC13A900051FFD /* Extensions */,
+				FF1E71912BDC137000051FFD /* Manangers */,
+				FF1E718C2BDC133600051FFD /* Utils */,
+				FF1E71882BDC131800051FFD /* Fonts */,
+				FF1E71832BDC12F500051FFD /* Screenshots */,
 				FF1E715C2BDC111D00051FFD /* Assets.xcassets */,
 				FF1E715E2BDC111D00051FFD /* LaunchScreen.storyboard */,
 				FF1E71612BDC111D00051FFD /* Info.plist */,
@@ -127,6 +340,368 @@
 			path = Reja24UITests;
 			sourceTree = "<group>";
 		};
+		FF1E71832BDC12F500051FFD /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71842BDC130100051FFD /* Reja 24 image 1.png */,
+				FF1E71852BDC130100051FFD /* Reja 24 image 2.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		FF1E71882BDC131800051FFD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E718A2BDC132600051FFD /* Monday.otf */,
+				FF1E718B2BDC132600051FFD /* Psychedelic.ttf */,
+				FF1E71892BDC132600051FFD /* StickySugary.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FF1E718C2BDC133600051FFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */,
+				FF1E718D2BDC134600051FFD /* Alert.swift */,
+				FF1E718E2BDC134600051FFD /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FF1E71912BDC137000051FFD /* Manangers */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71962BDC138800051FFD /* LanguageMananger */,
+				FF1E71922BDC137C00051FFD /* LocalNotificationManager.swift */,
+				FF1E71932BDC137C00051FFD /* SharedMananger.swift */,
+			);
+			path = Manangers;
+			sourceTree = "<group>";
+		};
+		FF1E71962BDC138800051FFD /* LanguageMananger */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71992BDC139500051FFD /* LanguageMananger+eng.swift */,
+				FF1E71982BDC139500051FFD /* LanguageMananger+ru.swift */,
+				FF1E71972BDC139400051FFD /* LanguageMananger+uz.swift */,
+				FF1E719A2BDC139500051FFD /* SetLanguage.swift */,
+			);
+			path = LanguageMananger;
+			sourceTree = "<group>";
+		};
+		FF1E719F2BDC13A900051FFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71A22BDC13B300051FFD /* String+extension.swift */,
+				FF1E71A12BDC13B300051FFD /* UIColor+extension.swift */,
+				FF1E71A02BDC13B200051FFD /* UIImage+extension.swift */,
+				FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF1E71A62BDC13C900051FFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71A72BDC13D300051FFD /* Protocols.swift */,
+				FF1E71A82BDC13D300051FFD /* Task_Manager.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF1E71AC2BDC13EE00051FFD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71AD2BDC140100051FFD /* ViewContollers */,
+				FF1E71AE2BDC141300051FFD /* TableViewCells */,
+				FF1E71AF2BDC142200051FFD /* CollectionViewCells */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FF1E71AD2BDC140100051FFD /* ViewContollers */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C62BDC14F700051FFD /* SideMenuTV.swift */,
+				FF1E71E12BDC152B00051FFD /* LanguageView.swift */,
+				FF1E71C22BDC14F700051FFD /* Tabbar.swift */,
+				FF1E72162BDC175300051FFD /* ScheduledTasksVC */,
+				FF1E720F2BDC172800051FFD /* CategoryVC */,
+				FF1E72082BDC16FB00051FFD /* TasksVC */,
+				FF1E72032BDC16C200051FFD /* AllFolders */,
+				FF1E71FC2BDC168A00051FFD /* FolderVC */,
+				FF1E71F72BDC162B00051FFD /* ChooseCategoriesVC */,
+				FF1E71F02BDC15F600051FFD /* SearchTasksVC */,
+				FF1E721D2BDC17AF00051FFD /* AddTaskVC */,
+				FF1E721E2BDC17D900051FFD /* ChooseLanguageVC */,
+				FF1E721F2BDC17F000051FFD /* CreateNewCategory */,
+				FF1E722A2BDC187E00051FFD /* ProfileVC */,
+				FF1E722B2BDC189100051FFD /* SettingsVC */,
+				FF1E72232BDC185000051FFD /* SetTimer */,
+				FF1E72212BDC181E00051FFD /* StartVC */,
+				FF1E72202BDC180900051FFD /* TaskDetailVC */,
+				FF1E72222BDC183E00051FFD /* FlaggedTasks */,
+				FF1E71B02BDC144600051FFD /* MainVC */,
+				FF1E71B92BDC147F00051FFD /* TasksWithFlag */,
+			);
+			path = ViewContollers;
+			sourceTree = "<group>";
+		};
+		FF1E71AE2BDC141300051FFD /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E723A2BDCAD2E00051FFD /* TasksForTodayTVC */,
+				FF1E72312BDC192E00051FFD /* MainTVC */,
+				FF1E722C2BDC190200051FFD /* TaskTVC */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FF1E71AF2BDC142200051FFD /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E724B2BDCADC700051FFD /* CategoryCVC */,
+				FF1E724C2BDCADD900051FFD /* FolderCVC */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		FF1E71B02BDC144600051FFD /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71B32BDC145600051FFD /* MainVC.swift */,
+				FF1E71B72BDC146800051FFD /* MainVC+setupViews.swift */,
+				FF1E71B12BDC145600051FFD /* MainVC+Protocol.swift */,
+				FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		FF1E71B92BDC147F00051FFD /* TasksWithFlag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TasksWithFlag;
+			sourceTree = "<group>";
+		};
+		FF1E71F02BDC15F600051FFD /* SearchTasksVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71F22BDC160200051FFD /* SearchTasksVC.swift */,
+				FF1E71DD2BDC152B00051FFD /* SearchTasksVC+setupViews.swift */,
+				FF1E71F32BDC160200051FFD /* SearchTasksVC+TableView.swift */,
+				FF1E71F12BDC160200051FFD /* SearchTasks+Protocol.swift */,
+			);
+			path = SearchTasksVC;
+			sourceTree = "<group>";
+		};
+		FF1E71F72BDC162B00051FFD /* ChooseCategoriesVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71F82BDC163500051FFD /* ChooseCategoriesVC.swift */,
+				FF1E71D62BDC152A00051FFD /* ChooseCategoriesVC+setupViews.swift */,
+				FF1E71F92BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift */,
+			);
+			path = ChooseCategoriesVC;
+			sourceTree = "<group>";
+		};
+		FF1E71FC2BDC168A00051FFD /* FolderVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71FF2BDC169700051FFD /* FolderVC.swift */,
+				FF1E71DE2BDC152B00051FFD /* FolderVC+setupViews.swift */,
+				FF1E71FD2BDC169700051FFD /* FolderVC+CollectionView.swift */,
+				FF1E71FE2BDC169700051FFD /* FolderVC+Protocol.swift */,
+			);
+			path = FolderVC;
+			sourceTree = "<group>";
+		};
+		FF1E72032BDC16C200051FFD /* AllFolders */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72052BDC16D000051FFD /* AllFoldersVC.swift */,
+				FF1E71DC2BDC152B00051FFD /* AllFolders+setupViews.swift */,
+				FF1E72042BDC16D000051FFD /* AllFolders+collectionView.swift */,
+			);
+			path = AllFolders;
+			sourceTree = "<group>";
+		};
+		FF1E72082BDC16FB00051FFD /* TasksVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E720A2BDC170B00051FFD /* TasksVC.swift */,
+				FF1E71D82BDC152A00051FFD /* TasksVC+setupViews.swift */,
+				FF1E720B2BDC170C00051FFD /* TasksVC+Protocol.swift */,
+				FF1E72092BDC170B00051FFD /* TasksVC+TableView.swift */,
+			);
+			path = TasksVC;
+			sourceTree = "<group>";
+		};
+		FF1E720F2BDC172800051FFD /* CategoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72112BDC173400051FFD /* CategoryVC.swift */,
+				FF1E71DA2BDC152B00051FFD /* CategoryVC+setupViews.swift */,
+				FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */,
+				FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */,
+			);
+			path = CategoryVC;
+			sourceTree = "<group>";
+		};
+		FF1E72162BDC175300051FFD /* ScheduledTasksVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72192BDC175F00051FFD /* ScheduledTasksVC.swift */,
+				FF1E72262BDC187300051FFD /* SchedualTasks+setupViews.swift */,
+				FF1E72182BDC175F00051FFD /* SchedualTasks+TableView.swift */,
+				FF1E72172BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift */,
+			);
+			path = ScheduledTasksVC;
+			sourceTree = "<group>";
+		};
+		FF1E721D2BDC17AF00051FFD /* AddTaskVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C42BDC14F700051FFD /* AddTaskVC.swift */,
+				FF1E71D72BDC152A00051FFD /* AddTaskVC+setupViews.swift */,
+			);
+			path = AddTaskVC;
+			sourceTree = "<group>";
+		};
+		FF1E721E2BDC17D900051FFD /* ChooseLanguageVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C52BDC14F700051FFD /* ChooseLanguageVC.swift */,
+				FF1E71E02BDC152B00051FFD /* ChooseLanguageVC+setupViews.swift */,
+			);
+			path = ChooseLanguageVC;
+			sourceTree = "<group>";
+		};
+		FF1E721F2BDC17F000051FFD /* CreateNewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C92BDC14F800051FFD /* CreateNewCategory.swift */,
+				FF1E71E22BDC152B00051FFD /* CreateNewCategory+setupViews.swift */,
+			);
+			path = CreateNewCategory;
+			sourceTree = "<group>";
+		};
+		FF1E72202BDC180900051FFD /* TaskDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C82BDC14F800051FFD /* TaskDetailVC.swift */,
+				FF1E71DB2BDC152B00051FFD /* TaskDetailVC+setupViews.swift */,
+			);
+			path = TaskDetailVC;
+			sourceTree = "<group>";
+		};
+		FF1E72212BDC181E00051FFD /* StartVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71CA2BDC14F800051FFD /* StartVC.swift */,
+				FF1E71D92BDC152A00051FFD /* StartVC+setupViews.swift */,
+			);
+			path = StartVC;
+			sourceTree = "<group>";
+		};
+		FF1E72222BDC183E00051FFD /* FlaggedTasks */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */,
+				FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */,
+				FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */,
+				FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */,
+			);
+			path = FlaggedTasks;
+			sourceTree = "<group>";
+		};
+		FF1E72232BDC185000051FFD /* SetTimer */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C72BDC14F700051FFD /* SetTimer.swift */,
+				FF1E71DF2BDC152B00051FFD /* SetTimer+setupViews.swift */,
+			);
+			path = SetTimer;
+			sourceTree = "<group>";
+		};
+		FF1E722A2BDC187E00051FFD /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71C32BDC14F700051FFD /* ProfileVC.swift */,
+				FF1E72252BDC187300051FFD /* ProfileVC+setupViews.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		FF1E722B2BDC189100051FFD /* SettingsVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72242BDC187300051FFD /* SettingsVC+setupViews.swift */,
+				FF1E71CB2BDC14F800051FFD /* SettingsVC.swift */,
+			);
+			path = SettingsVC;
+			sourceTree = "<group>";
+		};
+		FF1E722C2BDC190200051FFD /* TaskTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E722D2BDC190B00051FFD /* TaskTVC.swift */,
+				FF1E722F2BDC191500051FFD /* TaskTVC+setupViews.swift */,
+			);
+			path = TaskTVC;
+			sourceTree = "<group>";
+		};
+		FF1E72312BDC192E00051FFD /* MainTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72322BDC193B00051FFD /* MainTVC.swift */,
+				FF1E72382BDC194500051FFD /* MainTVC+setupViews.swift */,
+				FF1E72342BDC193B00051FFD /* MainTVC+CollectionView.swift */,
+				FF1E72332BDC193B00051FFD /* MainTVC+Protocol.swift */,
+			);
+			path = MainTVC;
+			sourceTree = "<group>";
+		};
+		FF1E723A2BDCAD2E00051FFD /* TasksForTodayTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E723C2BDCAD4200051FFD /* TasksForTodayTVC.swift */,
+				FF1E72412BDCAD5100051FFD /* TasksForTodayTVC+setupViews.swift */,
+				FF1E723B2BDCAD4200051FFD /* TasksForTodayTVC+Protocol.swift */,
+				FF1E723D2BDCAD4300051FFD /* TasksForTodayTVC+TableView.swift */,
+			);
+			path = TasksForTodayTVC;
+			sourceTree = "<group>";
+		};
+		FF1E724B2BDCADC700051FFD /* CategoryCVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72442BDCAD9200051FFD /* CategoryCVC.swift */,
+				FF1E72472BDCADB400051FFD /* CategoryCVC+setupViews.swift */,
+			);
+			path = CategoryCVC;
+			sourceTree = "<group>";
+		};
+		FF1E724C2BDCADD900051FFD /* FolderCVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72432BDCAD9200051FFD /* FolderCVC.swift */,
+				FF1E72482BDCADB400051FFD /* FolderCVC+setupViews.swift */,
+			);
+			path = FolderCVC;
+			sourceTree = "<group>";
+		};
+		FF1E724D2BDCAE1400051FFD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E724F2BDCAE2200051FFD /* CategoryViewModel.swift */,
+				FF1E72502BDCAE2200051FFD /* FolderViewModel.swift */,
+				FF1E724E2BDCAE2200051FFD /* TasksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +709,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF1E717A2BDC111E00051FFD /* Build configuration list for PBXNativeTarget "Reja24" */;
 			buildPhases = (
+				28753C2B4D1A91D61CE01D99 /* [CP] Check Pods Manifest.lock */,
 				FF1E714C2BDC111B00051FFD /* Sources */,
 				FF1E714D2BDC111B00051FFD /* Frameworks */,
 				FF1E714E2BDC111B00051FFD /* Resources */,
+				5D6973F017312B9467026D38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +728,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF1E717D2BDC111E00051FFD /* Build configuration list for PBXNativeTarget "Reja24Tests" */;
 			buildPhases = (
+				F4932B9A1F99CD7D738ACBFA /* [CP] Check Pods Manifest.lock */,
 				FF1E71622BDC111E00051FFD /* Sources */,
 				FF1E71632BDC111E00051FFD /* Frameworks */,
 				FF1E71642BDC111E00051FFD /* Resources */,
@@ -169,9 +747,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF1E71802BDC111E00051FFD /* Build configuration list for PBXNativeTarget "Reja24UITests" */;
 			buildPhases = (
+				5A7794832AED700B3F779662 /* [CP] Check Pods Manifest.lock */,
 				FF1E716C2BDC111E00051FFD /* Sources */,
 				FF1E716D2BDC111E00051FFD /* Frameworks */,
 				FF1E716E2BDC111E00051FFD /* Resources */,
+				D4C6FBC151EBBB68A0D0E02B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +811,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1E71862BDC130100051FFD /* Reja 24 image 1.png in Resources */,
 				FF1E71602BDC111D00051FFD /* LaunchScreen.storyboard in Resources */,
 				FF1E715D2BDC111D00051FFD /* Assets.xcassets in Resources */,
-				FF1E715B2BDC111B00051FFD /* Main.storyboard in Resources */,
+				FF1E71872BDC130100051FFD /* Reja 24 image 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +834,199 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28753C2B4D1A91D61CE01D99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reja24-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A7794832AED700B3F779662 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reja24-Reja24UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D6973F017312B9467026D38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reja24/Pods-Reja24-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reja24/Pods-Reja24-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reja24/Pods-Reja24-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C6FBC151EBBB68A0D0E02B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reja24-Reja24UITests/Pods-Reja24-Reja24UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reja24-Reja24UITests/Pods-Reja24-Reja24UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reja24-Reja24UITests/Pods-Reja24-Reja24UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4932B9A1F99CD7D738ACBFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reja24Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FF1E714C2BDC111B00051FFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1E71582BDC111B00051FFD /* ViewController.swift in Sources */,
-				FF1E71542BDC111B00051FFD /* AppDelegate.swift in Sources */,
-				FF1E71562BDC111B00051FFD /* SceneDelegate.swift in Sources */,
+				FF1E71C12BDC149A00051FFD /* FlaggedTasks+setupViews.swift in Sources */,
+				FF1E72512BDCAE2200051FFD /* TasksViewModel.swift in Sources */,
+				FF1E71EF2BDC152C00051FFD /* CreateNewCategory+setupViews.swift in Sources */,
+				FF1E720D2BDC170C00051FFD /* TasksVC.swift in Sources */,
+				FF1E718F2BDC134600051FFD /* Alert.swift in Sources */,
+				FF1E722E2BDC190B00051FFD /* TaskTVC.swift in Sources */,
+				FF1E71B62BDC145600051FFD /* MainVC.swift in Sources */,
+				FF1E720E2BDC170C00051FFD /* TasksVC+Protocol.swift in Sources */,
+				FF1E71E82BDC152C00051FFD /* TaskDetailVC+setupViews.swift in Sources */,
+				FF1E721A2BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift in Sources */,
+				FF1E71D22BDC14F800051FFD /* TaskDetailVC.swift in Sources */,
+				FF1E72352BDC193B00051FFD /* MainTVC.swift in Sources */,
+				FF1E72532BDCAE2200051FFD /* FolderViewModel.swift in Sources */,
+				FF1E72062BDC16D000051FFD /* AllFolders+collectionView.swift in Sources */,
+				FF1E71FA2BDC163500051FFD /* ChooseCategoriesVC.swift in Sources */,
+				FF1E71E32BDC152C00051FFD /* ChooseCategoriesVC+setupViews.swift in Sources */,
+				FF1E723E2BDCAD4300051FFD /* TasksForTodayTVC+Protocol.swift in Sources */,
+				FF1E71BF2BDC148C00051FFD /* FlaggedTasks+TableView.swift in Sources */,
+				FF1E71EE2BDC152C00051FFD /* LanguageView.swift in Sources */,
+				FF1E71F42BDC160200051FFD /* SearchTasks+Protocol.swift in Sources */,
+				FF1E71EA2BDC152C00051FFD /* SearchTasksVC+setupViews.swift in Sources */,
+				FF1E71942BDC137C00051FFD /* LocalNotificationManager.swift in Sources */,
+				FF1E72422BDCAD5100051FFD /* TasksForTodayTVC+setupViews.swift in Sources */,
+				FF1E71902BDC134600051FFD /* Constants.swift in Sources */,
+				FF1E71952BDC137C00051FFD /* SharedMananger.swift in Sources */,
+				FF1E72572BDCBFD400051FFD /* NotificationCenter+extansion.swift in Sources */,
+				FF1E72302BDC191500051FFD /* TaskTVC+setupViews.swift in Sources */,
+				FF1E72152BDC173400051FFD /* CategoryVC+CollectionView.swift in Sources */,
+				FF1E71E42BDC152C00051FFD /* AddTaskVC+setupViews.swift in Sources */,
+				FF1E71A32BDC13B300051FFD /* UIImage+extension.swift in Sources */,
+				FF1E72462BDCAD9200051FFD /* CategoryCVC.swift in Sources */,
+				FF1E71E62BDC152C00051FFD /* StartVC+setupViews.swift in Sources */,
+				FF1E72372BDC193B00051FFD /* MainTVC+CollectionView.swift in Sources */,
+				FF1E71ED2BDC152C00051FFD /* ChooseLanguageVC+setupViews.swift in Sources */,
+				FF1E71D02BDC14F800051FFD /* SideMenuTV.swift in Sources */,
+				FF1E71AB2BDC13D300051FFD /* Task_Manager.xcdatamodeld in Sources */,
+				FF1E71CC2BDC14F800051FFD /* Tabbar.swift in Sources */,
+				FF1E72022BDC169700051FFD /* FolderVC.swift in Sources */,
+				FF1E72362BDC193B00051FFD /* MainTVC+Protocol.swift in Sources */,
+				FF1E72132BDC173400051FFD /* CategoryVC+Protocol.swift in Sources */,
+				FF1E72272BDC187300051FFD /* SettingsVC+setupViews.swift in Sources */,
+				FF1E719B2BDC139500051FFD /* LanguageMananger+uz.swift in Sources */,
+				FF1E72012BDC169700051FFD /* FolderVC+Protocol.swift in Sources */,
+				FF1E72142BDC173400051FFD /* CategoryVC.swift in Sources */,
+				FF1E721C2BDC175F00051FFD /* ScheduledTasksVC.swift in Sources */,
+				FF1E71CD2BDC14F800051FFD /* ProfileVC.swift in Sources */,
+				FF1E719C2BDC139500051FFD /* LanguageMananger+ru.swift in Sources */,
+				FF1E721B2BDC175F00051FFD /* SchedualTasks+TableView.swift in Sources */,
+				FF1E71EB2BDC152C00051FFD /* FolderVC+setupViews.swift in Sources */,
+				FF1E72282BDC187300051FFD /* ProfileVC+setupViews.swift in Sources */,
+				FF1E71E72BDC152C00051FFD /* CategoryVC+setupViews.swift in Sources */,
+				FF1E71F62BDC160200051FFD /* SearchTasksVC+TableView.swift in Sources */,
+				FF1E71D42BDC14F800051FFD /* StartVC.swift in Sources */,
+				FF1E71A52BDC13B300051FFD /* String+extension.swift in Sources */,
+				FF1E71BE2BDC148C00051FFD /* FlaggedTasks+Protocol.swift in Sources */,
+				FF1E72452BDCAD9200051FFD /* FolderCVC.swift in Sources */,
+				FF1E71BD2BDC148C00051FFD /* FlaggedTasks.swift in Sources */,
+				FF1E71AA2BDC13D300051FFD /* Protocols.swift in Sources */,
+				FF1E71FB2BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift in Sources */,
+				FF1E72072BDC16D000051FFD /* AllFoldersVC.swift in Sources */,
+				FF1E71F52BDC160200051FFD /* SearchTasksVC.swift in Sources */,
+				FF1E72552BDCAF4F00051FFD /* AppDelegate.swift in Sources */,
+				FF1E72492BDCADB400051FFD /* CategoryCVC+setupViews.swift in Sources */,
+				FF1E71D52BDC14F800051FFD /* SettingsVC.swift in Sources */,
+				FF1E72392BDC194500051FFD /* MainTVC+setupViews.swift in Sources */,
+				FF1E71B42BDC145600051FFD /* MainVC+Protocol.swift in Sources */,
+				FF1E71A42BDC13B300051FFD /* UIColor+extension.swift in Sources */,
+				FF1E72002BDC169700051FFD /* FolderVC+CollectionView.swift in Sources */,
+				FF1E71EC2BDC152C00051FFD /* SetTimer+setupViews.swift in Sources */,
+				FF1E71B52BDC145600051FFD /* MainVC+TableView.swift in Sources */,
+				FF1E71E92BDC152C00051FFD /* AllFolders+setupViews.swift in Sources */,
+				FF1E72402BDCAD4300051FFD /* TasksForTodayTVC+TableView.swift in Sources */,
+				FF1E71D12BDC14F800051FFD /* SetTimer.swift in Sources */,
+				FF1E719D2BDC139500051FFD /* LanguageMananger+eng.swift in Sources */,
+				FF1E72292BDC187300051FFD /* SchedualTasks+setupViews.swift in Sources */,
+				FF1E71CE2BDC14F800051FFD /* AddTaskVC.swift in Sources */,
+				FF1E72522BDCAE2200051FFD /* CategoryViewModel.swift in Sources */,
+				FF1E723F2BDCAD4300051FFD /* TasksForTodayTVC.swift in Sources */,
+				FF1E71D32BDC14F800051FFD /* CreateNewCategory.swift in Sources */,
+				FF1E71B82BDC146800051FFD /* MainVC+setupViews.swift in Sources */,
+				FF1E71E52BDC152C00051FFD /* TasksVC+setupViews.swift in Sources */,
+				FF1E719E2BDC139500051FFD /* SetLanguage.swift in Sources */,
+				FF1E724A2BDCADB400051FFD /* FolderCVC+setupViews.swift in Sources */,
+				FF1E71CF2BDC14F800051FFD /* ChooseLanguageVC.swift in Sources */,
+				FF1E720C2BDC170C00051FFD /* TasksVC+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +1063,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FF1E71592BDC111B00051FFD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF1E715A2BDC111B00051FFD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FF1E715E2BDC111D00051FFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -353,7 +1111,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -416,7 +1174,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -437,6 +1195,7 @@
 		};
 		FF1E717B2BDC111E00051FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3CD55F857B78422184ED9B8 /* Pods-Reja24.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,7 +1206,7 @@
 				INFOPLIST_FILE = Reja24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,6 +1224,7 @@
 		};
 		FF1E717C2BDC111E00051FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1AD1DD77A297563AD9F125 /* Pods-Reja24.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,7 +1235,7 @@
 				INFOPLIST_FILE = Reja24/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -493,6 +1253,7 @@
 		};
 		FF1E717E2BDC111E00051FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660BDEA182E2CEA1F0D20B45 /* Pods-Reja24Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +1274,7 @@
 		};
 		FF1E717F2BDC111E00051FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B89BD555913E0FFE2C964529 /* Pods-Reja24Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +1295,7 @@
 		};
 		FF1E71812BDC111E00051FFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7A40CE7BAC1FEE6CE3C871 /* Pods-Reja24-Reja24UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +1314,7 @@
 		};
 		FF1E71822BDC111E00051FFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A24D14053F721E37BF20B7 /* Pods-Reja24-Reja24UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -607,6 +1371,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF1E71A82BDC13D300051FFD /* Task_Manager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF1E71A92BDC13D300051FFD /* Task_Manager.xcdatamodel */,
+			);
+			currentVersion = FF1E71A92BDC13D300051FFD /* Task_Manager.xcdatamodel */;
+			path = Task_Manager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF1E71482BDC111B00051FFD /* Project object */;
 }

@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManager (6.5.17)
+  - SideMenu (6.5.0)
+  - SSNeumorphicView (0.1.2)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - SideMenu
+  - SSNeumorphicView
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - SideMenu
+    - SSNeumorphicView
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 904d013844bbae0abe073f015487bfebe5476335
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SSNeumorphicView: d853ecbeeef231834d8f298eed38c1ceb0a08745
+
+PODFILE CHECKSUM: 889ba6bbe68d1e54944727686551b71a5e05d74d
+
+COCOAPODS: 1.15.2

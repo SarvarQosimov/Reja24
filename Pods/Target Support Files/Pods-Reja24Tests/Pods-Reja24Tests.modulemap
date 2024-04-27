@@ -1,0 +1,6 @@
+framework module Pods_Reja24Tests {
+  umbrella header "Pods-Reja24Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
