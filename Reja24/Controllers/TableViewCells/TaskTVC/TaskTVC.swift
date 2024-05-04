@@ -56,7 +56,7 @@ class TaskTVC: UITableViewCell {
     }
     
     //MARK: updateCell
-    func updateCell(task: String, isDone: Bool, priority: String, dedline: String, img: String, isFlagged: Bool) {
+    func updateCell(task: String, isDone: Bool, priority: String, deadline: String, img: String, isFlagged: Bool) {
         self.isDone = isDone
         backView.backgroundColor = Constants.mainBackgroundColor
         backView.layer.borderWidth = 3
@@ -84,7 +84,7 @@ class TaskTVC: UITableViewCell {
         flagImg.isHidden = !isFlagged
         
         lbl.text = task
-        selectedDate = dedline
+        selectedDate = deadline
         dedlineLbl.text = String(selectedDate.dropLast(5))
         
         if priority == "High" {

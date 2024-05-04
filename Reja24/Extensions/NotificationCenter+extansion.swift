@@ -8,10 +8,9 @@
 import Foundation
 
 extension Notification.Name {
-    static let categoryDeleted = Notification.Name("categoryDeleted")
-//    Notification.Name {
-//        return Notification.Name("categoryDeleted")
-//    }
+    static let categoryChanged = Notification.Name("categoryChanged")
+    static let folderChanged = Notification.Name("folderChanged")
+    static let createNewTemplate = Notification.Name("createNewTemplate")
 }
 
 

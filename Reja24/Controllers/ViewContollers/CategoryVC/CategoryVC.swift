@@ -9,9 +9,10 @@ import UIKit
 import CoreData
 import SideMenu
 
+//TODO: - CategoryVC change to AllCategoryVC
 class CategoryVC: UIViewController {
     
-    //MARK: Elements
+    //MARK: views
     var collectionView: UICollectionView!
     let backgroundImg = UIImageView()
     
@@ -33,7 +34,7 @@ class CategoryVC: UIViewController {
     }
     
     /// if category change, it will notify
-    static var categoryChanged: DataChangedDelegate!
+//    static var categoryChanged: DataChangedDelegate!
     
     
     //MARK: Life cycle
@@ -41,13 +42,16 @@ class CategoryVC: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupCollectionView()
-        categories = categoryViewModel.fetchCategories()
+        
+        initBaseSettings()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         TasksForTodayTVC.role = .today
-        CategoryVC.categoryChanged.categoriesChanged()
+        NotificationCenter.default.post(name: .categoryChanged, object: nil)
+//        not cen use
+//        CategoryVC.categoryChanged.categoriesChanged()
     }
     
     //MARK: menuPressed
@@ -57,9 +61,9 @@ class CategoryVC: UIViewController {
         setupSideMenu()
         present(SideMenuManager.default.leftMenuNavigationController!, animated: true)
     }
-        
+    
     //MARK: setupSideMenu
-     func setupSideMenu() {
+    func setupSideMenu() {
         SideMenuTV.userTasksNumber = tasks.count
         menu.blurEffectStyle = .systemThinMaterialDark
         menu.setNavigationBarHidden(true, animated: false)
@@ -68,6 +72,18 @@ class CategoryVC: UIViewController {
         SideMenuManager.default.leftMenuNavigationController = menu
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
     }
+    
+    func initBaseSettings(){
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCategory(_:)), name: .categoryChanged, object: nil)
+        
+        categories = categoryViewModel.fetchCategories()
+    }
+    
+    @objc func updateCategory(_ sender: Any){
+        self.categories = categoryViewModel.fetchCategories()
+        collectionView.reloadData()
+    }
+    
 }
 
 

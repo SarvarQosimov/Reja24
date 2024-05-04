@@ -30,19 +30,13 @@ extension MainTVC {
         collectionView.register(CategoryCVC.self, forCellWithReuseIdentifier: CategoryCVC.identifier)
         collectionView.register(FolderCVC.self, forCellWithReuseIdentifier: FolderCVC.identifire)
         
-        addNewCategory.translatesAutoresizingMaskIntoConstraints = false
-        addNewCategory.layer.cornerRadius = 12
-        addNewCategory.clipsToBounds = true
-        
-        let plusImage = UIImage(
-            systemName: "plus",
-            withConfiguration: UIImage.SymbolConfiguration(weight: .bold)
-        )
-        
-        addNewCategory.setImage(plusImage/*UIImage(systemName: "plus")*/, for: .normal) // .circle.fill
-        addNewCategory.tintColor = .systemBlue//.systemGreen
-        addNewCategory.addTarget(self, action: #selector(plusPressed(_:)), for: .touchUpInside)
-        addNewCategory.tintColor = .primaryAppColor
+//        addNewCategory.translatesAutoresizingMaskIntoConstraints = false
+//        addNewCategory.layer.cornerRadius = 12
+//        addNewCategory.clipsToBounds = true
+//        
+//        addNewCategory.setImage(UIImage(named: "plus_button"), for: .normal)
+//        addNewCategory.addTarget(self, action: #selector(plusPressed(_:)), for: .touchUpInside)
+//        addNewCategory.tintColor = .primaryAppColor
         
         headerName.translatesAutoresizingMaskIntoConstraints = false
         headerName.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
@@ -52,13 +46,13 @@ extension MainTVC {
         
         viewAllBtn.translatesAutoresizingMaskIntoConstraints = false
         viewAllBtn.setTitle(SetLanguage.setLanguage(.allBtn), for: .normal)
-        viewAllBtn.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        viewAllBtn.setTitleColor(.primaryAppColor, for: .normal)
+        viewAllBtn.titleLabel?.font = UIFont(name: Constants.appFont, size: 15)
+        viewAllBtn.setTitleColor(Constants.textColor, for: .normal)
         viewAllBtn.addTarget(self, action: #selector(seeAllCategories(_:)), for: .touchUpInside)
         
         collectionView.addSubview(noDataLbl)
         noDataLbl.translatesAutoresizingMaskIntoConstraints = false
-        noDataLbl.font = UIFont(name: "American Typewriter", size: 15)
+        noDataLbl.font = UIFont(name: Constants.appFont, size: 15)
         noDataLbl.textColor = .primaryAppColor
         //#colorLiteral(red: 0.03000372276, green: 0.7603657842, blue: 0.6727795005, alpha: 1)
         noDataLbl.isHidden = true
@@ -86,24 +80,24 @@ extension MainTVC {
         contentView.addSubview(headerName)
         contentView.addSubview(viewAllBtn)
         contentView.addSubview(collectionView)
-        contentView.addSubview(addNewCategory)
+//        contentView.addSubview(addNewCategory)
     }
     
     private func addConstraints(){
         NSLayoutConstraint.activate([
+            headerName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
+            headerName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 11),
+            
             collectionView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
-            collectionView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -33),
-            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 25),
+            collectionView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
+            collectionView.topAnchor.constraint(equalTo: headerName.bottomAnchor, constant: 5),
             collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0),
             
-            addNewCategory.widthAnchor.constraint(equalToConstant: 55),
-            addNewCategory.heightAnchor.constraint(equalToConstant: 55),
-            addNewCategory.leftAnchor.constraint(equalTo: collectionView.rightAnchor, constant: -3),
-            addNewCategory.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+//            addNewCategory.widthAnchor.constraint(equalToConstant: 21),
+//            addNewCategory.heightAnchor.constraint(equalToConstant: 21),
+//            addNewCategory.leftAnchor.constraint(equalTo: collectionView.rightAnchor, constant: 7),
+//            addNewCategory.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
-            headerName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
-            headerName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
-                        
             viewAllBtn.rightAnchor.constraint(equalTo: collectionView.rightAnchor, constant: 0),
             viewAllBtn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             

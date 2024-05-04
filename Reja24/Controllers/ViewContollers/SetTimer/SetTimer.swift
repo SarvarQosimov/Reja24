@@ -11,12 +11,13 @@ import CoreData
 class SetTimer: UIViewController {
    
     //MARK: Elements
-    let miniView       = UIView()
-    let cancelBtn      = UIButton()
-    let datePicker     = UIDatePicker()
-    let setBtn         = UIButton()
-    let miniCancelView = UIView()
-    
+    let miniView         = UIView()
+    let cancelBtn        = UIButton()
+    let datePicker       = UIDatePicker()
+    let setBtn           = UIButton()
+    let miniCancelView   = UIView()
+    let dismisAreaButton = UIButton()
+
     //MARK: VARIABLES
     let contex = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     static var title    = ""
@@ -49,8 +50,7 @@ class SetTimer: UIViewController {
                 repeats: false,
                 userInfo: ["aps":["a":"q"]]
             )
-            // upadate dataBase
-//            fetchTasks()
+
             tasks = taskViewModel.fetchTasks()
             tasks[SetTimer.whichTask].dedline = dedlineText
             taskViewModel.save()

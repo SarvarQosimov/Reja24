@@ -23,10 +23,15 @@ class ProfileVC: UIViewController {
         setupViews()
         getUserInfo()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.backgroundColor = .primaryAppColor
+    }
+    
     //MARK: savePressed
     @objc func savePressed(_ sender: Any){
-        print(secondNameTF.text!, firstNameTF.text!)
+
         if secondNameTF.text!.isEmpty {
             userDef.set("", forKey: Constants.firstNameTfForProfile)
         } else {
@@ -68,11 +73,11 @@ class ProfileVC: UIViewController {
         secondNameTF.text = userDef.string(forKey: Constants.firstNameTfForProfile) ?? ""
         firstNameTF.text = userDef.string(forKey: Constants.secondNameTfForProfile) ?? ""
         let img = userDef.string(forKey: Constants.userImageForProfile)
-        if let userImage = img {
-            userImg.image = userImage.toImage()
-            userImg.layer.cornerRadius = 50
+        
+        if let image = img, let userImage = image.toImage()  {
+            userImg.image = userImage
         } else {
-            userImg.image = UIImage(systemName: "person.fill.badge.plus")
+            userImg.image = UIImage(named: "add_user_image")
         }
     }
     

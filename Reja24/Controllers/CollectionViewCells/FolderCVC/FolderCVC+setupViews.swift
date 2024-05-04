@@ -17,16 +17,17 @@ extension FolderCVC {
         
         /*      folderName      */
         folderName.translatesAutoresizingMaskIntoConstraints = false
-        folderName.font = UIFont(name: "Noteworthy Bold", size: 15)
+        folderName.font = UIFont(name: Constants.appFont, size: 15)
         folderName.numberOfLines = 2
-        folderName.textColor = .systemBrown
-        folderName.textAlignment = .center
+        folderName.textColor = Constants.textColor
+        folderName.textAlignment = .left
         folderName.lineBreakMode = .byCharWrapping
         
         /*       folderImg     */
         folderImg.translatesAutoresizingMaskIntoConstraints = false
         folderImg.image = UIImage(named: "folder")
-
+        folderImg.contentMode = .scaleAspectFill
+        
         addConstraints()
     }
     
@@ -39,16 +40,17 @@ extension FolderCVC {
     //MARK: addConstraints
     private func addConstraints(){
         NSLayoutConstraint.activate([
-            folderName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 3),
+            folderName.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 7),
+            folderName.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 7),
             folderName.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -3),
-            folderName.topAnchor.constraint(equalTo:contentView.topAnchor, constant: 0),
-            folderName.heightAnchor.constraint(equalToConstant: 50),
-            folderName.widthAnchor.constraint(equalToConstant: 250),
+            folderName.topAnchor.constraint(equalTo:contentView.topAnchor, constant: 5),
             
-            folderImg.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 0),
-            folderImg.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 0),
-            folderImg.topAnchor.constraint(equalTo: folderName.bottomAnchor, constant: 5),
-            folderImg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
+            folderImg.widthAnchor.constraint(equalToConstant: 85),
+            folderImg.heightAnchor.constraint(equalToConstant: 45),
+            folderImg.topAnchor.constraint(equalTo: folderName.bottomAnchor, constant: 15),
+//            folderImg.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
+//            folderImg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -3),
+            folderImg.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 7)
         ])
     }
 

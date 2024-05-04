@@ -9,7 +9,7 @@ import UIKit
 
 class TaskDetailVC: UIViewController {
 
-    //MARK: Elements
+    //MARK: views
     let taskImage  = UIImageView()
     let taskLbl    = UILabel()
     let taskName   = UILabel()
@@ -20,8 +20,11 @@ class TaskDetailVC: UIViewController {
     let stack2     = UIStackView()
     let doneLbl    = UILabel()
     let isDone     = UISwitch()
-    let datePicker = UIDatePicker()
     let calendar   = Calendar.current
+    let datePicker = UIDatePicker()
+
+    
+    let tableView = UITableView()
     
     //MARK: Variables
     var dateComponents = DateComponents()
@@ -31,16 +34,60 @@ class TaskDetailVC: UIViewController {
     var hourString     = ""
     var minuteString   = ""
     
+    var task: TaskDB
+    
+    var taskDetails: [TaskDetailBaseTVC] = []
+    
+    init(task: TaskDB) {
+        self.task = task
+        super.init(nibName: nil, bundle: nil)
+        
+        setTaskDetails()
+        setupTableView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     //MARK: Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        datePicker.isEnabled = false
+        
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.backgroundColor = .primaryAppColor
         TasksVC.isTaskDetail = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.backgroundColor = Constants.mainBackgroundColor
+    
+    }
+    
+    func setTaskDetails(){
+        if let taskImage = task.image?.toImage() {
+            taskDetails.append(TaskDetail_ImageTVC(taskImage: taskImage))
+        }
+        
+        if let taskName = task.task {
+            taskDetails.append(TaskDetail_AssignmentTVC(assignment: taskName))
+        }
+        
+        if let taskNote = task.note, !taskNote.isEmpty {
+            taskDetails.append(TaskDetail_AssignmentTVC(assignment: taskNote, isNote: true))
+        }
+        
+        taskDetails.append(TaskDetail_TaskStatusTVC(status: task.isDone))
+        
+        if let taskDeadline = task.dedline, !taskDeadline.isEmpty {
+            taskDetails.append(TaskDetail_DeadlineTVC(taskDeadline))
+        }
+        
     }
     
     //MARK: updateView
@@ -65,40 +112,9 @@ class TaskDetailVC: UIViewController {
         } else {
             self.isDone.isOn = false
         }
-        setupDatePicker(data.dedline ?? "")
+//        setupDatePicker(data.dedline ?? "")
     }
     
     //MARK: setupDatePicker
-    func setupDatePicker(_ taskTime: String) {
-        if taskTime.isEmpty {
-            datePicker.isHidden = true
-        }
-        
-        for i in taskTime.enumerated() {
-            if i.offset < 4 {
-                yearString.append(i.element)
-            } else if i.offset == 5 || i.offset == 6 {
-                monthString.append(i.element)
-            } else if i.offset == 8 || i.offset == 9 {
-                dayString.append(i.element)
-            } else if i.offset == 14 || i.offset == 15 {
-                hourString.append(i.element)
-            } else if i.offset == 17 || i.offset == 18 {
-                minuteString.append(i.element)
-            }
-        }
-        
-        dateComponents.year = Int(yearString)
-        dateComponents.month = Int(monthString)
-        dateComponents.day = Int(dayString)
-        dateComponents.hour = Int(hourString)
-        dateComponents.minute = Int(minuteString)
-        
-        if let customDate = calendar.date(from: dateComponents) {
-            datePicker.date = customDate
-        } else {
-            print("error")
-        }
-    }
     
 }

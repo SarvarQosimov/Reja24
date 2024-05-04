@@ -12,19 +12,28 @@ extension SetTimer {
     //MARK: setupViews
     func setupViews(){
         
-        addSubviews(miniCancelView, datePicker, setBtn, cancelBtn)
+        addSubviews(datePicker, setBtn, cancelBtn)
+        
+        dismisAreaButton.translatesAutoresizingMaskIntoConstraints = false
+        dismisAreaButton.backgroundColor = .clear
+        dismisAreaButton.addTarget(
+            self, action: #selector(cancelPresssed(_:)), for: .touchUpInside
+        )
+  
         
         view.backgroundColor = .clear
         miniView.translatesAutoresizingMaskIntoConstraints = false
-        miniView.backgroundColor = Constants.backgroundColorForMiniView
+        miniView.backgroundColor = Constants.mainBackgroundColor//Constants.backgroundColorForMiniView
         miniView.layer.maskedCorners = CACornerMask([.layerMinXMinYCorner, .layerMaxXMinYCorner])
         miniView.layer.cornerRadius = 25
         miniView.clipsToBounds = true
+        miniView.layer.borderColor = UIColor.primaryAppColor.cgColor
+        miniView.layer.borderWidth = 1
         
-        miniCancelView.translatesAutoresizingMaskIntoConstraints = false
-        miniCancelView.backgroundColor = .white
-        miniCancelView.layer.cornerRadius = 2
-        miniCancelView.clipsToBounds = true
+        cancelBtn.translatesAutoresizingMaskIntoConstraints = false
+        cancelBtn.setImage(UIImage(named: "close_icon"), for: .normal)
+        cancelBtn.backgroundColor = .clear
+        cancelBtn.addTarget(self, action: #selector(cancelPresssed(_:)), for: .touchUpInside)
         
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         datePicker.backgroundColor = .systemGray4
@@ -33,22 +42,18 @@ extension SetTimer {
         
         setBtn.translatesAutoresizingMaskIntoConstraints = false
         setBtn.setTitle(SetLanguage.setLanguage(.setBtn), for: .normal)
-        let setColor = #colorLiteral(red: 0.2750142515, green: 0.5995237231, blue: 0.625458777, alpha: 1)
-        setBtn.setTitleColor(setColor, for: .normal)
-        setBtn.titleLabel?.font = .boldSystemFont(ofSize: 25)
+        setBtn.setTitleColor(Constants.textColor, for: .normal)
+        setBtn.titleLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
         setBtn.addTarget(self, action: #selector(setPressed(_:)), for: .touchUpInside)
-        
-        cancelBtn.translatesAutoresizingMaskIntoConstraints = false
-        cancelBtn.setTitle(SetLanguage.setLanguage(.cancelBtn), for: .normal)
-        cancelBtn.setTitleColor(.link, for: .normal)
-        cancelBtn.backgroundColor = .clear
-        cancelBtn.addTarget(self, action: #selector(cancelPresssed(_:)), for: .touchUpInside)
+       
         
         addConstraints()
     }
     
     private func addSubviews(_ views: UIView...){
+        view.addSubview(dismisAreaButton)
         view.addSubview(miniView)
+        
         views.forEach { element in
             miniView.addSubview(element)
         }
@@ -56,15 +61,15 @@ extension SetTimer {
     
     private func addConstraints(){
         NSLayoutConstraint.activate([
+            dismisAreaButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dismisAreaButton.topAnchor.constraint(equalTo: view.topAnchor),
+            dismisAreaButton.rightAnchor.constraint(equalTo: view.rightAnchor),
+            dismisAreaButton.bottomAnchor.constraint(equalTo: miniView.topAnchor),
+            
             miniView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             miniView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             miniView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             miniView.heightAnchor.constraint(equalToConstant: 150),
-            
-            miniCancelView.heightAnchor.constraint(equalToConstant: 15),
-            miniCancelView.heightAnchor.constraint(equalToConstant: 30),
-            miniCancelView.centerXAnchor.constraint(equalTo: miniView.centerXAnchor),
-            miniCancelView.bottomAnchor.constraint(equalTo: miniView.topAnchor, constant: 15),
             
             datePicker.rightAnchor.constraint(equalTo: miniView.rightAnchor, constant: -10),
             datePicker.bottomAnchor.constraint(equalTo: setBtn.topAnchor, constant: -5),
@@ -73,9 +78,10 @@ extension SetTimer {
             setBtn.bottomAnchor.constraint(equalTo: miniView.bottomAnchor, constant: -20),
             
             cancelBtn.leftAnchor.constraint(equalTo: miniView.leftAnchor, constant: 10),
-            cancelBtn.topAnchor.constraint(equalTo: miniView.topAnchor, constant: 10)
+            cancelBtn.topAnchor.constraint(equalTo: miniView.topAnchor, constant: 10),
+            cancelBtn.widthAnchor.constraint(equalToConstant: 25),
+            cancelBtn.heightAnchor.constraint(equalToConstant: 25)
         ])
     }
-
     
 }

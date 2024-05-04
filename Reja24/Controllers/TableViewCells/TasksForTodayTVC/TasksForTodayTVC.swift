@@ -31,7 +31,9 @@ class TasksForTodayTVC: UITableViewCell {
         ScheduledTasksVC.delegate = self
         SearchTasksVC.taskUpdatedDelegate = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateTasks(_:)) , name: .categoryDeleted, object: nil)
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(updateTasks(_:)) , name: .categoryChanged, object: nil
+        )
     }
     
     required init?(coder: NSCoder) {

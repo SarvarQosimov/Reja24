@@ -76,7 +76,7 @@ extension TasksForTodayTVC: UITableViewDataSource {
             task: tasksOfToday[indexPath.row].task!,
             isDone: tasksOfToday[indexPath.row].isDone,
             priority: tasksOfToday[indexPath.row].priority!,
-            dedline: tasksOfToday[indexPath.row].dedline!,
+            deadline: tasksOfToday[indexPath.row].dedline!,
             img: tasksOfToday[indexPath.row].image ?? "",
             isFlagged: tasksOfToday[indexPath.row].isFlagged
         )

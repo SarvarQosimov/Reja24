@@ -26,7 +26,7 @@ extension MainTVC: UICollectionViewDataSource {
                 name: categories[indexPath.item].nameCategory ?? "Unnamed category",
                 color: categories[indexPath.item].colorCategory ?? "",
                 isFavourity: categories[indexPath.item].isFavourity,
-                false, false
+                isSelectAble: false
             )
             
             cellForCategory.backgroundColor = .clear

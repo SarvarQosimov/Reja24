@@ -30,6 +30,7 @@ extension SetLanguage {
         case .foldersTitle:                  return "Fayllar"
         case .pressPlusForFoldersMessage:    return "Yangi faly qo`shish uchun + bosing"
         case .tasksForToday:                 return "Bugungi vazifalar"
+        case .newCategory:                   return "Yangi kategoriya"
             
             ///` SettingsVC
         case .languageTitle:                 return "Til"
@@ -73,13 +74,16 @@ extension SetLanguage {
         case .addCategoriesBtn:              return "Kategoriyalar qo`shish"
         case .delete:                        return "o`chirish"
         case .warningMessage:                return "Kategoriyalarni o`chirmoqchimisiz ?"
+        case .noAnyCategory:                 return "Sizda kategoriya yo'q"
             
             ///` ChooseCategoriesVC
         case .addToFolder:                   return "Faylga qo'shish"
             
             ///` TaskDetailVC
         case .task:                          return "Vazifa"
-        case .finished:                      return "Bajarildi"
+        case .finished:                      return "Bajarilgan"
+        case .notFinished:                   return "Bajarilmagan"
+        case .status:                        return "Holati"
             
             ///` SearchTaskVC
         case .searchTaskTitle:               return "Vazifani qidirish"
@@ -95,8 +99,8 @@ extension SetLanguage {
         case .setBtn:                        return "O`rnatish"
 
             ///`FlaggedTasksVC
-        case .flaggedTitle:                  return "Belgilangangan vazifalar"
-        case .noFlaggedTasksMessage:         return "Sizda belgilangan vazifalar yo`q"
+        case .flaggedTitle:                  return "Bayroqli"
+        case .noFlaggedTasksMessage:         return "Sizda bayroqli vazifalar yo`q"
             
             ///`ScheduledVC
         case .noScheduledTasksMessanger:     return "Sizda rejalashtirilgan vazifalar yo'q"

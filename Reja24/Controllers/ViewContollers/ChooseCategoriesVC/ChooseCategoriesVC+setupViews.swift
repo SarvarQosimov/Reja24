@@ -26,12 +26,12 @@ extension ChooseCategoriesVC {
         
         addToFolder.setTitle(SetLanguage.setLanguage(.addToFolder), for: .normal)
         addToFolder.setTitleColor(.systemBlue, for: .normal)
-        addToFolder.titleLabel?.font = .italicSystemFont(ofSize: 17)
+        addToFolder.titleLabel?.font = UIFont(name: Constants.appFont, size: 17)
         addToFolder.addTarget(self, action: #selector(addToFolderPressed(_:)), for: .touchUpInside)
         
         cancelBtn.setTitle(SetLanguage.setLanguage(.cancelBtn), for: .normal)
         cancelBtn.setTitleColor(.systemBlue, for: .normal)
-        cancelBtn.titleLabel?.font = .boldSystemFont(ofSize: 17)
+        cancelBtn.titleLabel?.font = UIFont(name: Constants.appFont, size: 17)
         cancelBtn.addTarget(self, action: #selector(cancelPressed(_:)), for: .touchUpInside)
         
         addConstrents()

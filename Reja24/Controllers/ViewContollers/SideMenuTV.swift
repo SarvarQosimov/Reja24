@@ -50,7 +50,7 @@ class SideMenuTV: UITableViewController {
                 SideMenuTV.userName = SideMenuTV.userName + ","
             }
             cell.textLabel?.text = SetLanguage.setLanguage(.youHaveTasksMessage)
-            cell.textLabel?.font = UIFont(name: "Avenir Next Heavy", size: 21)
+            cell.textLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21) // "Avenir Next Heavy"
             cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0.9797974229, blue: 0.9090745449, alpha: 1)
         }
         cell.textLabel?.numberOfLines = 0

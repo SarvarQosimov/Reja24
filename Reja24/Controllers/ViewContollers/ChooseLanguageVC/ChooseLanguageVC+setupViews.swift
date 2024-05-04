@@ -25,7 +25,7 @@ extension ChooseLanguageVC {
         
         chooseLanguageLbl.translatesAutoresizingMaskIntoConstraints = false
         chooseLanguageLbl.textColor = .darkText
-        chooseLanguageLbl.font = UIFont(name: "American Typewriter Bold", size: 33)
+        chooseLanguageLbl.font = UIFont(name: Constants.appFont + " Semibold", size: 33)
         chooseLanguageLbl.text = "Choose language"
         
         let englishLanguageView = LanguageView(

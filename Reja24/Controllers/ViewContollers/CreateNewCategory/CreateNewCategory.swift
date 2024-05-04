@@ -21,6 +21,7 @@ class CreateNewCategory: UIViewController {
     var colorsLbl             = UILabel()
     var colors                = [UIButton]()
     var stackViewForColorBtns = UIStackView()
+    let dismisAreaButton      = UIButton()
     
     //MARK: Variables
     var categories        = [CategoryDB()]
@@ -28,7 +29,7 @@ class CreateNewCategory: UIViewController {
     var colorTag          = 1
     let categoryViewModel = CategoryViewModel()
     var index: Int?       = 0
-    static var categoryChanged: DataChangedDelegate!
+//    static var categoryChanged: DataChangedDelegate!
     var borderColor: UIColor {
         if UserDefaults.standard.string(forKey: Constants.appMode) == "dark" {
              return .white
@@ -55,6 +56,11 @@ class CreateNewCategory: UIViewController {
     }
     
     //MARK: @objc functions
+    
+    @objc func dismissAreaPressed(_ sender: UIButton){
+        dismiss(animated: true)
+    }
+    
     @objc func donePressed(_ sender: Any){
         categoryNameTF.resignFirstResponder()
     }
@@ -110,7 +116,9 @@ class CreateNewCategory: UIViewController {
                 categories.append(newCategory)
             }
             categoryViewModel.save()
-            CreateNewCategory.categoryChanged.categoriesChanged()
+            
+            NotificationCenter.default.post(name: .categoryChanged, object: nil)
+            
             dismiss(animated: true)
         } else {
             let alert = Alert.makeAlertController(SetLanguage.setLanguage(.nameCannotBeEmptyMessage))

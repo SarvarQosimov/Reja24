@@ -34,10 +34,6 @@
 		FF1E71B52BDC145600051FFD /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */; };
 		FF1E71B62BDC145600051FFD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B32BDC145600051FFD /* MainVC.swift */; };
 		FF1E71B82BDC146800051FFD /* MainVC+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71B72BDC146800051FFD /* MainVC+setupViews.swift */; };
-		FF1E71BD2BDC148C00051FFD /* FlaggedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */; };
-		FF1E71BE2BDC148C00051FFD /* FlaggedTasks+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */; };
-		FF1E71BF2BDC148C00051FFD /* FlaggedTasks+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */; };
-		FF1E71C12BDC149A00051FFD /* FlaggedTasks+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */; };
 		FF1E71CC2BDC14F800051FFD /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C22BDC14F700051FFD /* Tabbar.swift */; };
 		FF1E71CD2BDC14F800051FFD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C32BDC14F700051FFD /* ProfileVC.swift */; };
 		FF1E71CE2BDC14F800051FFD /* AddTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E71C42BDC14F700051FFD /* AddTaskVC.swift */; };
@@ -74,7 +70,6 @@
 		FF1E720C2BDC170C00051FFD /* TasksVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72092BDC170B00051FFD /* TasksVC+TableView.swift */; };
 		FF1E720D2BDC170C00051FFD /* TasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E720A2BDC170B00051FFD /* TasksVC.swift */; };
 		FF1E720E2BDC170C00051FFD /* TasksVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E720B2BDC170C00051FFD /* TasksVC+Protocol.swift */; };
-		FF1E72132BDC173400051FFD /* CategoryVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */; };
 		FF1E72142BDC173400051FFD /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72112BDC173400051FFD /* CategoryVC.swift */; };
 		FF1E72152BDC173400051FFD /* CategoryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */; };
 		FF1E721A2BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72172BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift */; };
@@ -102,6 +97,21 @@
 		FF1E72532BDCAE2200051FFD /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72502BDCAE2200051FFD /* FolderViewModel.swift */; };
 		FF1E72552BDCAF4F00051FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */; };
 		FF1E72572BDCBFD400051FFD /* NotificationCenter+extansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */; };
+		FF1E725A2BDFC72F00051FFD /* PlusButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72592BDFC72F00051FFD /* PlusButtonView.swift */; };
+		FF1E72602BDFF8AF00051FFD /* CreateNewTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E725F2BDFF8AF00051FFD /* CreateNewTemplate.swift */; };
+		FF1E72622BDFFA6200051FFD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72612BDFFA6200051FFD /* Enums.swift */; };
+		FF1E72652BE20CC400051FFD /* TaskDetail_ImageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72642BE20CC400051FFD /* TaskDetail_ImageTVC.swift */; };
+		FF1E72672BE20D4200051FFD /* TaskDetail_AssignmentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72662BE20D4100051FFD /* TaskDetail_AssignmentTVC.swift */; };
+		FF1E72692BE20DCA00051FFD /* TaskDetail_TaskStatusTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72682BE20DCA00051FFD /* TaskDetail_TaskStatusTVC.swift */; };
+		FF1E726B2BE20E1600051FFD /* TaskDetail_DeadlineTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E726A2BE20E1600051FFD /* TaskDetail_DeadlineTVC.swift */; };
+		FF1E726D2BE20EBC00051FFD /* CGRect+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E726C2BE20EBC00051FFD /* CGRect+extension.swift */; };
+		FF1E726F2BE222E000051FFD /* TaskDetailVC+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E726E2BE222E000051FFD /* TaskDetailVC+tableView.swift */; };
+		FF1E72712BE247E100051FFD /* TaskDetailBaseTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72702BE247E100051FFD /* TaskDetailBaseTVC.swift */; };
+		FF1E72732BE248B600051FFD /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1E72722BE248B600051FFD /* UIView+extension.swift */; };
+		FFC6A6DB2BE413BE00EAA799 /* FlaggedTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6A6D72BE413BE00EAA799 /* FlaggedTasksVC.swift */; };
+		FFC6A6DC2BE413BE00EAA799 /* FlaggedTasks+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6A6D82BE413BE00EAA799 /* FlaggedTasks+Protocol.swift */; };
+		FFC6A6DD2BE413BE00EAA799 /* FlaggedTasksVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6A6D92BE413BE00EAA799 /* FlaggedTasksVC+TableView.swift */; };
+		FFC6A6DE2BE413BE00EAA799 /* FlaggedTasks+setupViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC6A6DA2BE413BE00EAA799 /* FlaggedTasks+setupViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,10 +172,6 @@
 		FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
 		FF1E71B32BDC145600051FFD /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FF1E71B72BDC146800051FFD /* MainVC+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainVC+setupViews.swift"; sourceTree = "<group>"; };
-		FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaggedTasks.swift; sourceTree = "<group>"; };
-		FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+Protocol.swift"; sourceTree = "<group>"; };
-		FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+TableView.swift"; sourceTree = "<group>"; };
-		FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+setupViews.swift"; sourceTree = "<group>"; };
 		FF1E71C22BDC14F700051FFD /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		FF1E71C32BDC14F700051FFD /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		FF1E71C42BDC14F700051FFD /* AddTaskVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVC.swift; sourceTree = "<group>"; };
@@ -202,7 +208,6 @@
 		FF1E72092BDC170B00051FFD /* TasksVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksVC+TableView.swift"; sourceTree = "<group>"; };
 		FF1E720A2BDC170B00051FFD /* TasksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksVC.swift; sourceTree = "<group>"; };
 		FF1E720B2BDC170C00051FFD /* TasksVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TasksVC+Protocol.swift"; sourceTree = "<group>"; };
-		FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryVC+Protocol.swift"; sourceTree = "<group>"; };
 		FF1E72112BDC173400051FFD /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
 		FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryVC+CollectionView.swift"; sourceTree = "<group>"; };
 		FF1E72172BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScheduledTasksVC+Protocol.swift"; sourceTree = "<group>"; };
@@ -230,6 +235,21 @@
 		FF1E72502BDCAE2200051FFD /* FolderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+extansion.swift"; sourceTree = "<group>"; };
+		FF1E72592BDFC72F00051FFD /* PlusButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonView.swift; sourceTree = "<group>"; };
+		FF1E725F2BDFF8AF00051FFD /* CreateNewTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTemplate.swift; sourceTree = "<group>"; };
+		FF1E72612BDFFA6200051FFD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		FF1E72642BE20CC400051FFD /* TaskDetail_ImageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail_ImageTVC.swift; sourceTree = "<group>"; };
+		FF1E72662BE20D4100051FFD /* TaskDetail_AssignmentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail_AssignmentTVC.swift; sourceTree = "<group>"; };
+		FF1E72682BE20DCA00051FFD /* TaskDetail_TaskStatusTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail_TaskStatusTVC.swift; sourceTree = "<group>"; };
+		FF1E726A2BE20E1600051FFD /* TaskDetail_DeadlineTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail_DeadlineTVC.swift; sourceTree = "<group>"; };
+		FF1E726C2BE20EBC00051FFD /* CGRect+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+extension.swift"; sourceTree = "<group>"; };
+		FF1E726E2BE222E000051FFD /* TaskDetailVC+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDetailVC+tableView.swift"; sourceTree = "<group>"; };
+		FF1E72702BE247E100051FFD /* TaskDetailBaseTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailBaseTVC.swift; sourceTree = "<group>"; };
+		FF1E72722BE248B600051FFD /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		FFC6A6D72BE413BE00EAA799 /* FlaggedTasksVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaggedTasksVC.swift; sourceTree = "<group>"; };
+		FFC6A6D82BE413BE00EAA799 /* FlaggedTasks+Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+Protocol.swift"; sourceTree = "<group>"; };
+		FFC6A6D92BE413BE00EAA799 /* FlaggedTasksVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasksVC+TableView.swift"; sourceTree = "<group>"; };
+		FFC6A6DA2BE413BE00EAA799 /* FlaggedTasks+setupViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FlaggedTasks+setupViews.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +385,7 @@
 				FF1E72542BDCAF4F00051FFD /* AppDelegate.swift */,
 				FF1E718D2BDC134600051FFD /* Alert.swift */,
 				FF1E718E2BDC134600051FFD /* Constants.swift */,
+				FF1E72612BDFFA6200051FFD /* Enums.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -397,6 +418,8 @@
 				FF1E71A12BDC13B300051FFD /* UIColor+extension.swift */,
 				FF1E71A02BDC13B200051FFD /* UIImage+extension.swift */,
 				FF1E72562BDCBFD400051FFD /* NotificationCenter+extansion.swift */,
+				FF1E726C2BE20EBC00051FFD /* CGRect+extension.swift */,
+				FF1E72722BE248B600051FFD /* UIView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -414,8 +437,9 @@
 			isa = PBXGroup;
 			children = (
 				FF1E71AD2BDC140100051FFD /* ViewContollers */,
-				FF1E71AE2BDC141300051FFD /* TableViewCells */,
 				FF1E71AF2BDC142200051FFD /* CollectionViewCells */,
+				FF1E71AE2BDC141300051FFD /* TableViewCells */,
+				FF1E72582BDFC70800051FFD /* HelperViews */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -423,27 +447,26 @@
 		FF1E71AD2BDC140100051FFD /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
-				FF1E71C62BDC14F700051FFD /* SideMenuTV.swift */,
-				FF1E71E12BDC152B00051FFD /* LanguageView.swift */,
-				FF1E71C22BDC14F700051FFD /* Tabbar.swift */,
-				FF1E72162BDC175300051FFD /* ScheduledTasksVC */,
-				FF1E720F2BDC172800051FFD /* CategoryVC */,
+				FF1E72212BDC181E00051FFD /* StartVC */,
+				FF1E71B02BDC144600051FFD /* MainVC */,
 				FF1E72082BDC16FB00051FFD /* TasksVC */,
+				FF1E72202BDC180900051FFD /* TaskDetailVC */,
+				FF1E721D2BDC17AF00051FFD /* AddTaskVC */,
+				FF1E720F2BDC172800051FFD /* CategoryVC */,
+				FF1E721F2BDC17F000051FFD /* CreateNewCategory */,
+				FF1E72162BDC175300051FFD /* ScheduledTasksVC */,
 				FF1E72032BDC16C200051FFD /* AllFolders */,
 				FF1E71FC2BDC168A00051FFD /* FolderVC */,
 				FF1E71F72BDC162B00051FFD /* ChooseCategoriesVC */,
 				FF1E71F02BDC15F600051FFD /* SearchTasksVC */,
-				FF1E721D2BDC17AF00051FFD /* AddTaskVC */,
 				FF1E721E2BDC17D900051FFD /* ChooseLanguageVC */,
-				FF1E721F2BDC17F000051FFD /* CreateNewCategory */,
 				FF1E722A2BDC187E00051FFD /* ProfileVC */,
 				FF1E722B2BDC189100051FFD /* SettingsVC */,
 				FF1E72232BDC185000051FFD /* SetTimer */,
-				FF1E72212BDC181E00051FFD /* StartVC */,
-				FF1E72202BDC180900051FFD /* TaskDetailVC */,
-				FF1E72222BDC183E00051FFD /* FlaggedTasks */,
-				FF1E71B02BDC144600051FFD /* MainVC */,
-				FF1E71B92BDC147F00051FFD /* TasksWithFlag */,
+				FFC6A6D62BE4139B00EAA799 /* FlaggedTasksVC */,
+				FF1E71C62BDC14F700051FFD /* SideMenuTV.swift */,
+				FF1E71C22BDC14F700051FFD /* Tabbar.swift */,
+				FF1E725F2BDFF8AF00051FFD /* CreateNewTemplate.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -451,6 +474,7 @@
 		FF1E71AE2BDC141300051FFD /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				FF1E72632BE20C7B00051FFD /* TaskDetailTVC */,
 				FF1E723A2BDCAD2E00051FFD /* TasksForTodayTVC */,
 				FF1E72312BDC192E00051FFD /* MainTVC */,
 				FF1E722C2BDC190200051FFD /* TaskTVC */,
@@ -476,13 +500,6 @@
 				FF1E71B22BDC145600051FFD /* MainVC+TableView.swift */,
 			);
 			path = MainVC;
-			sourceTree = "<group>";
-		};
-		FF1E71B92BDC147F00051FFD /* TasksWithFlag */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TasksWithFlag;
 			sourceTree = "<group>";
 		};
 		FF1E71F02BDC15F600051FFD /* SearchTasksVC */ = {
@@ -544,7 +561,6 @@
 				FF1E72112BDC173400051FFD /* CategoryVC.swift */,
 				FF1E71DA2BDC152B00051FFD /* CategoryVC+setupViews.swift */,
 				FF1E72122BDC173400051FFD /* CategoryVC+CollectionView.swift */,
-				FF1E72102BDC173400051FFD /* CategoryVC+Protocol.swift */,
 			);
 			path = CategoryVC;
 			sourceTree = "<group>";
@@ -592,6 +608,8 @@
 			children = (
 				FF1E71C82BDC14F800051FFD /* TaskDetailVC.swift */,
 				FF1E71DB2BDC152B00051FFD /* TaskDetailVC+setupViews.swift */,
+				FF1E726E2BE222E000051FFD /* TaskDetailVC+tableView.swift */,
+				FF1E72702BE247E100051FFD /* TaskDetailBaseTVC.swift */,
 			);
 			path = TaskDetailVC;
 			sourceTree = "<group>";
@@ -603,17 +621,6 @@
 				FF1E71D92BDC152A00051FFD /* StartVC+setupViews.swift */,
 			);
 			path = StartVC;
-			sourceTree = "<group>";
-		};
-		FF1E72222BDC183E00051FFD /* FlaggedTasks */ = {
-			isa = PBXGroup;
-			children = (
-				FF1E71BA2BDC148C00051FFD /* FlaggedTasks.swift */,
-				FF1E71C02BDC149A00051FFD /* FlaggedTasks+setupViews.swift */,
-				FF1E71BB2BDC148C00051FFD /* FlaggedTasks+Protocol.swift */,
-				FF1E71BC2BDC148C00051FFD /* FlaggedTasks+TableView.swift */,
-			);
-			path = FlaggedTasks;
 			sourceTree = "<group>";
 		};
 		FF1E72232BDC185000051FFD /* SetTimer */ = {
@@ -700,6 +707,38 @@
 				FF1E724E2BDCAE2200051FFD /* TasksViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF1E72582BDFC70800051FFD /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E71E12BDC152B00051FFD /* LanguageView.swift */,
+				FF1E72592BDFC72F00051FFD /* PlusButtonView.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		FF1E72632BE20C7B00051FFD /* TaskDetailTVC */ = {
+			isa = PBXGroup;
+			children = (
+				FF1E72642BE20CC400051FFD /* TaskDetail_ImageTVC.swift */,
+				FF1E72662BE20D4100051FFD /* TaskDetail_AssignmentTVC.swift */,
+				FF1E72682BE20DCA00051FFD /* TaskDetail_TaskStatusTVC.swift */,
+				FF1E726A2BE20E1600051FFD /* TaskDetail_DeadlineTVC.swift */,
+			);
+			path = TaskDetailTVC;
+			sourceTree = "<group>";
+		};
+		FFC6A6D62BE4139B00EAA799 /* FlaggedTasksVC */ = {
+			isa = PBXGroup;
+			children = (
+				FFC6A6D72BE413BE00EAA799 /* FlaggedTasksVC.swift */,
+				FFC6A6DA2BE413BE00EAA799 /* FlaggedTasks+setupViews.swift */,
+				FFC6A6D92BE413BE00EAA799 /* FlaggedTasksVC+TableView.swift */,
+				FFC6A6D82BE413BE00EAA799 /* FlaggedTasks+Protocol.swift */,
+			);
+			name = FlaggedTasksVC;
+			path = TasksWithFlag/FlaggedTasksVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -942,24 +981,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1E71C12BDC149A00051FFD /* FlaggedTasks+setupViews.swift in Sources */,
 				FF1E72512BDCAE2200051FFD /* TasksViewModel.swift in Sources */,
+				FF1E72712BE247E100051FFD /* TaskDetailBaseTVC.swift in Sources */,
 				FF1E71EF2BDC152C00051FFD /* CreateNewCategory+setupViews.swift in Sources */,
 				FF1E720D2BDC170C00051FFD /* TasksVC.swift in Sources */,
+				FF1E72672BE20D4200051FFD /* TaskDetail_AssignmentTVC.swift in Sources */,
 				FF1E718F2BDC134600051FFD /* Alert.swift in Sources */,
 				FF1E722E2BDC190B00051FFD /* TaskTVC.swift in Sources */,
 				FF1E71B62BDC145600051FFD /* MainVC.swift in Sources */,
 				FF1E720E2BDC170C00051FFD /* TasksVC+Protocol.swift in Sources */,
 				FF1E71E82BDC152C00051FFD /* TaskDetailVC+setupViews.swift in Sources */,
+				FFC6A6DE2BE413BE00EAA799 /* FlaggedTasks+setupViews.swift in Sources */,
 				FF1E721A2BDC175F00051FFD /* ScheduledTasksVC+Protocol.swift in Sources */,
 				FF1E71D22BDC14F800051FFD /* TaskDetailVC.swift in Sources */,
 				FF1E72352BDC193B00051FFD /* MainTVC.swift in Sources */,
 				FF1E72532BDCAE2200051FFD /* FolderViewModel.swift in Sources */,
 				FF1E72062BDC16D000051FFD /* AllFolders+collectionView.swift in Sources */,
+				FF1E726D2BE20EBC00051FFD /* CGRect+extension.swift in Sources */,
 				FF1E71FA2BDC163500051FFD /* ChooseCategoriesVC.swift in Sources */,
+				FF1E72732BE248B600051FFD /* UIView+extension.swift in Sources */,
 				FF1E71E32BDC152C00051FFD /* ChooseCategoriesVC+setupViews.swift in Sources */,
 				FF1E723E2BDCAD4300051FFD /* TasksForTodayTVC+Protocol.swift in Sources */,
-				FF1E71BF2BDC148C00051FFD /* FlaggedTasks+TableView.swift in Sources */,
 				FF1E71EE2BDC152C00051FFD /* LanguageView.swift in Sources */,
 				FF1E71F42BDC160200051FFD /* SearchTasks+Protocol.swift in Sources */,
 				FF1E71EA2BDC152C00051FFD /* SearchTasksVC+setupViews.swift in Sources */,
@@ -971,8 +1013,11 @@
 				FF1E72302BDC191500051FFD /* TaskTVC+setupViews.swift in Sources */,
 				FF1E72152BDC173400051FFD /* CategoryVC+CollectionView.swift in Sources */,
 				FF1E71E42BDC152C00051FFD /* AddTaskVC+setupViews.swift in Sources */,
+				FFC6A6DD2BE413BE00EAA799 /* FlaggedTasksVC+TableView.swift in Sources */,
 				FF1E71A32BDC13B300051FFD /* UIImage+extension.swift in Sources */,
 				FF1E72462BDCAD9200051FFD /* CategoryCVC.swift in Sources */,
+				FF1E72652BE20CC400051FFD /* TaskDetail_ImageTVC.swift in Sources */,
+				FFC6A6DB2BE413BE00EAA799 /* FlaggedTasksVC.swift in Sources */,
 				FF1E71E62BDC152C00051FFD /* StartVC+setupViews.swift in Sources */,
 				FF1E72372BDC193B00051FFD /* MainTVC+CollectionView.swift in Sources */,
 				FF1E71ED2BDC152C00051FFD /* ChooseLanguageVC+setupViews.swift in Sources */,
@@ -981,9 +1026,10 @@
 				FF1E71CC2BDC14F800051FFD /* Tabbar.swift in Sources */,
 				FF1E72022BDC169700051FFD /* FolderVC.swift in Sources */,
 				FF1E72362BDC193B00051FFD /* MainTVC+Protocol.swift in Sources */,
-				FF1E72132BDC173400051FFD /* CategoryVC+Protocol.swift in Sources */,
+				FF1E725A2BDFC72F00051FFD /* PlusButtonView.swift in Sources */,
 				FF1E72272BDC187300051FFD /* SettingsVC+setupViews.swift in Sources */,
 				FF1E719B2BDC139500051FFD /* LanguageMananger+uz.swift in Sources */,
+				FF1E72602BDFF8AF00051FFD /* CreateNewTemplate.swift in Sources */,
 				FF1E72012BDC169700051FFD /* FolderVC+Protocol.swift in Sources */,
 				FF1E72142BDC173400051FFD /* CategoryVC.swift in Sources */,
 				FF1E721C2BDC175F00051FFD /* ScheduledTasksVC.swift in Sources */,
@@ -991,14 +1037,16 @@
 				FF1E719C2BDC139500051FFD /* LanguageMananger+ru.swift in Sources */,
 				FF1E721B2BDC175F00051FFD /* SchedualTasks+TableView.swift in Sources */,
 				FF1E71EB2BDC152C00051FFD /* FolderVC+setupViews.swift in Sources */,
+				FF1E72622BDFFA6200051FFD /* Enums.swift in Sources */,
+				FFC6A6DC2BE413BE00EAA799 /* FlaggedTasks+Protocol.swift in Sources */,
 				FF1E72282BDC187300051FFD /* ProfileVC+setupViews.swift in Sources */,
 				FF1E71E72BDC152C00051FFD /* CategoryVC+setupViews.swift in Sources */,
+				FF1E72692BE20DCA00051FFD /* TaskDetail_TaskStatusTVC.swift in Sources */,
+				FF1E726F2BE222E000051FFD /* TaskDetailVC+tableView.swift in Sources */,
 				FF1E71F62BDC160200051FFD /* SearchTasksVC+TableView.swift in Sources */,
 				FF1E71D42BDC14F800051FFD /* StartVC.swift in Sources */,
 				FF1E71A52BDC13B300051FFD /* String+extension.swift in Sources */,
-				FF1E71BE2BDC148C00051FFD /* FlaggedTasks+Protocol.swift in Sources */,
 				FF1E72452BDCAD9200051FFD /* FolderCVC.swift in Sources */,
-				FF1E71BD2BDC148C00051FFD /* FlaggedTasks.swift in Sources */,
 				FF1E71AA2BDC13D300051FFD /* Protocols.swift in Sources */,
 				FF1E71FB2BDC163500051FFD /* ChooseCategoriesVC+CollectionView.swift in Sources */,
 				FF1E72072BDC16D000051FFD /* AllFoldersVC.swift in Sources */,
@@ -1007,6 +1055,7 @@
 				FF1E72492BDCADB400051FFD /* CategoryCVC+setupViews.swift in Sources */,
 				FF1E71D52BDC14F800051FFD /* SettingsVC.swift in Sources */,
 				FF1E72392BDC194500051FFD /* MainTVC+setupViews.swift in Sources */,
+				FF1E726B2BE20E1600051FFD /* TaskDetail_DeadlineTVC.swift in Sources */,
 				FF1E71B42BDC145600051FFD /* MainVC+Protocol.swift in Sources */,
 				FF1E71A42BDC13B300051FFD /* UIColor+extension.swift in Sources */,
 				FF1E72002BDC169700051FFD /* FolderVC+CollectionView.swift in Sources */,
@@ -1201,14 +1250,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89RN94CCMH;
+				DEVELOPMENT_TEAM = 7W6F238426;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reja24/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1230,14 +1281,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 89RN94CCMH;
+				DEVELOPMENT_TEAM = 7W6F238426;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reja24/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -30,7 +30,7 @@ class FolderViewModel {
          contex.delete(folders[index])
          folders.remove(at: index)
          save()
- 
+         
          return folders
      }
     

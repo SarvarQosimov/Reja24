@@ -25,12 +25,14 @@ extension CategoryVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as! CategoryCVC? else { return UICollectionViewCell() }
+        
         cell.updateCell(
-            name       : categories[indexPath.item].nameCategory ?? "Unnamed category",
-            color      : categories[indexPath.item].colorCategory ?? "#AAAAAA",
+            name: categories[indexPath.item].nameCategory ?? "Unnamed category",
+            color: categories[indexPath.item].colorCategory ?? "#AAAAAA",
             isFavourity: categories[indexPath.item].isFavourity,
-            false, false
+            isSelectAble: false
         )
+        
         return cell
     }
 }
@@ -43,19 +45,20 @@ extension CategoryVC: UICollectionViewDelegate {
         
         let actionProvider: UIContextMenuActionProvider = { suggestedActions in
             
-            let delete = UIAction(title: SetLanguage.setLanguage(.deleteCategory), handler: { [self] action in
+            let deleteAction = UIAction(title: SetLanguage.setLanguage(.deleteCategory), handler: { [self] action in
                 tasks = taskViewModel.fetchTasks()
                 categories = categoryViewModel.deleteCategory(index: indexPath.row)
                 categoryViewModel.removeTasksOfDeletedCategory(index: indexPath.row)
                 
-                NotificationCenter.default.post(name: .categoryDeleted, object: nil)
+                NotificationCenter.default.post(name: .categoryChanged, object: nil)
                 
                 collectionView.reloadData()
             })
-            delete.image = UIImage(systemName: "trash")
+            deleteAction.image = UIImage(systemName: "trash")
             
-            let editNameOfCategory = UIAction(title: SetLanguage.setLanguage(.editCategory)) { [self] action in
-                CreateNewCategory.categoryChanged = self
+            let editCategoryName_Action = UIAction(title: SetLanguage.setLanguage(.editCategory)) { [self] action in
+                
+//                CreateNewCategory.categoryChanged = self
                 let vc = CreateNewCategory()
                 vc.index = indexPath.row
                 switch categories[indexPath.row].colorCategory {
@@ -69,9 +72,9 @@ extension CategoryVC: UICollectionViewDelegate {
                  }
                 present(vc, animated: true)
             }
-            editNameOfCategory.image = UIImage(systemName: "pencil")
+            editCategoryName_Action.image = UIImage(systemName: "pencil")
             
-            return UIMenu(title: "", children: [delete, editNameOfCategory])
+            return UIMenu(title: "", children: [deleteAction, editCategoryName_Action])
         }
         
         return UIContextMenuConfiguration(identifier: nil, previewProvider: nil, actionProvider: actionProvider)

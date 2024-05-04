@@ -13,7 +13,7 @@ class MainTVC: UITableViewCell {
     //MARK: Elements
     var collectionView: UICollectionView!
     var layout         = UICollectionViewFlowLayout()
-    var addNewCategory = UIButton()
+//    var addNewCategory = UIButton()
     var viewAllBtn     = UIButton()
     var headerName     = UILabel()
     let noDataLbl      = UILabel()
@@ -49,7 +49,15 @@ class MainTVC: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         categoryViewModel.updateCategories = self
         
-        AllFoldersVC.folderChanged = self
+//        CreateNewCategory.categoryChanged = self // TODO:  shuni o`rniga not cen
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(updateCategories(_:)) , name: .categoryChanged, object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(updateFolders(_:)) , name: .folderChanged, object: nil
+        )
+        
         categories = categoryViewModel.fetchCategories()
         folders = folderViewModel.fetchFolders()
     }
@@ -57,27 +65,26 @@ class MainTVC: UITableViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
-    //MARK: plusPressed
-    @objc func plusPressed(_ sender: Any){
-        if typeOfCollection == .category {
-            CreateNewCategory.categoryChanged = self
-            openVcDelegate.openCreateNewCategoryVC()
-        } else {
-            MainVC.folderChanged = self
-            openVcDelegate.openCreateNewFolderVC()
-        }
-    }
         
     //MARK: seeAllCategories
     @objc func seeAllCategories(_ sender: Any){
         if typeOfCollection == .category {
-            CategoryVC.categoryChanged = self
             openVcDelegate.openAllCategoriesVC()
         } else {
             openVcDelegate.openAllFoldersVC()
         }
     }
+    
+    @objc func updateCategories(_ sender: UIButton) {
+        self.categories = categoryViewModel.fetchCategories()
+        self.collectionView.reloadData()
+    }
+    
+    @objc func updateFolders(_ sender: UIButton) {
+        self.folders = folderViewModel.fetchFolders()
+        self.collectionView.reloadData()
+    }
+    
     
     //MARK: setupItemSize
     func setupItemSize(){

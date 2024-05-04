@@ -31,9 +31,8 @@ extension TasksVC {
         
         addBtn.translatesAutoresizingMaskIntoConstraints = false
         addBtn.backgroundColor = .primaryAppColor
-        //#colorLiteral(red: 0.1960784314, green: 0.8431372549, blue: 0.2941176471, alpha: 1)
         addBtn.setTitle(SetLanguage.setLanguage(.addNewTask), for: .normal)
-        addBtn.titleLabel?.font = UIFont(name: "American Typewriter Condensed Bold", size: 21)
+        addBtn.titleLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
         addBtn.setTitleColor(.white, for: .normal)
         addBtn.layer.cornerRadius = 5
         addBtn.addTarget(self, action: #selector(addTaskPressed(_:)), for: .touchUpInside)

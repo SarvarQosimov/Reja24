@@ -32,7 +32,7 @@ extension TasksVC: UITableViewDataSource {
                 task     : taskOnly[indexPath.row].task!,
                 isDone   : taskOnly[indexPath.row].isDone,
                 priority : taskOnly[indexPath.row].priority!,
-                dedline  : taskOnly[indexPath.row].dedline!,
+                deadline  : taskOnly[indexPath.row].dedline!,
                 img      : taskOnly[indexPath.row].image ?? "",
                 isFlagged: taskOnly[indexPath.row].isFlagged
             )
@@ -108,8 +108,8 @@ extension TasksVC: UITableViewDelegate {
     //MARK: didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         TasksVC.isTaskDetail = true
-        let vc = TaskDetailVC()
-        vc.updateView(taskOnly[indexPath.row])
+        let vc = TaskDetailVC(task: taskOnly[indexPath.row])
+//        vc.updateView(taskOnly[indexPath.row])
         navigationController?.pushViewController(vc, animated: true)
     }
 }

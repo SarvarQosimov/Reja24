@@ -11,7 +11,7 @@ import UIKit
 extension MainVC: OpenViewControllerDelegate {
     
     func openTaskDetailVC(_ task: TaskDB) {
-        let vc = TaskDetailVC()
+        let vc = TaskDetailVC(task: task)
         vc.hidesBottomBarWhenPushed = true
         vc.updateView(task)
         navigationController?.pushViewController(vc, animated: true)
@@ -19,7 +19,7 @@ extension MainVC: OpenViewControllerDelegate {
     
     func openSetTimerVC(_ index: Int) {
         let vc = SetTimer()
-        vc.modalPresentationStyle = .overFullScreen
+//        vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
     }
     
@@ -33,7 +33,6 @@ extension MainVC: OpenViewControllerDelegate {
         let vc = CreateNewCategory()
         vc.index = nil
         vc.hidesBottomBarWhenPushed = true
-        vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
     }
     
@@ -50,7 +49,7 @@ extension MainVC: OpenViewControllerDelegate {
     }
     
     func openCreateNewFolderVC() {
-        presentNewFolderAlert()
+//        presentNewFolderAlert()
     }
     func openTasksVC(_ indexOfCategory: Int, _ titleOfCategory: String) {
         let vc = TasksVC()
@@ -66,21 +65,5 @@ extension MainVC: OpenViewControllerDelegate {
         FolderVC.whichFolder = indexOfFolder
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension MainVC: DataChangedDelegate {
-    func tasksChanged() {
-        //tasks updated
-    }
-    
-    func categoriesChanged() {
-        tasks = taskViewModel.fetchTasks()
-        tableView.reloadData()
-    }
-    
-    func foldersChanged() {
-//        self.folders = folderViewModel.fetchFolders()
-//        self.collectionView.reloadData()
     }
 }

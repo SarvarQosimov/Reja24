@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             window?.rootViewController = ChooseLanguageVC()
         }
-        
+
         window?.makeKeyAndVisible()
         setupNotification(application: application)
         

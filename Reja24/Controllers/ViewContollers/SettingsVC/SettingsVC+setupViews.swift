@@ -27,7 +27,7 @@ extension SettingsVC {
             for: .normal
         )
         appLanguageBtn.setTitleColor(Constants.textColor, for: .normal)
-        appLanguageBtn.titleLabel?.font = UIFont(name: "American Typewriter Bold", size: 21)
+        appLanguageBtn.titleLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
         appLanguageBtn.setImage(UIImage(systemName: "globe"), for: .normal)
         appLanguageBtn.addTarget(self, action: #selector(languagePressed(_:)), for: .touchUpInside)
         
@@ -107,6 +107,7 @@ extension SettingsVC {
         } else {
             darkModeSwich.isOn = false
         }
+        darkModeSwich.onTintColor = .primaryAppColor
         darkModeSwich.addTarget(self, action: #selector(appModeChanged(_:)), for: .touchUpInside)
         
         stackViewForDarkMode.translatesAutoresizingMaskIntoConstraints = false

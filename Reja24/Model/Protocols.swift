@@ -19,8 +19,6 @@ protocol FinishedDelegate {
     func isDone(_ index: Int)
 }
 
-///` new protocols after review code
-
 protocol OpenViewControllerDelegate {
     func openAllCategoriesVC()
     func openAllFoldersVC()

@@ -16,7 +16,8 @@ extension TaskTVC {
         addConstraints()
         
         backView.backgroundColor = Constants.mainBackgroundColor
-        backView.layer.borderColor = #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1)
+        backView.layer.borderColor = UIColor.primaryAppColor.cgColor
+        //#colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1)
         
         backView.layer.borderWidth = 3
         backView.layer.cornerRadius = 11
@@ -50,7 +51,7 @@ extension TaskTVC {
         
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 0
-        lbl.font = UIFont(name: "StickySugary-Regular", size: 17)
+        lbl.font = UIFont(name: Constants.appFont, size: 17)
         lbl.textAlignment = .left
         lbl.textColor = Constants.textColor
         

@@ -22,33 +22,17 @@ extension ScheduledTasksVC {
         title = SetLanguage.setLanguage(.scheduledTasksTitle)
         view.backgroundColor = Constants.mainBackgroundColor
         TasksForTodayTVC.role = .schedualed
-
-        noTasksLbl.translatesAutoresizingMaskIntoConstraints = false
-        noTasksLbl.text = SetLanguage.setLanguage(.noScheduledTasksMessanger)
-        noTasksLbl.font = UIFont(name: "Noteworthy Bold", size: 23)
-        noTasksLbl.textColor = #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1)
-        noTasksLbl.numberOfLines = 0
+        
+        emptyBoxImageView.translatesAutoresizingMaskIntoConstraints = false
+        emptyBoxImageView.image = UIImage(named: "emptyBoxImage")
+        emptyBoxImageView.contentMode = .scaleAspectFit
         
         addConstraints()
-        
-        if UserDefaults.standard.string(forKey: Constants.appLanguage) == "ru" {
-            NSLayoutConstraint.activate([
-                noTasksLbl.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
-                noTasksLbl.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
-                noTasksLbl.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-            ])
-        } else {
-            NSLayoutConstraint.activate([
-                noTasksLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                noTasksLbl.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-            ])
-        }
-        
     }
 
     private func addSubviews(){
         view.addSubview(tableView)
-        view.addSubview(noTasksLbl)
+        view.addSubview(emptyBoxImageView)
     }
     
     private func addConstraints(){
@@ -56,7 +40,12 @@ extension ScheduledTasksVC {
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
             tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
+            
+            emptyBoxImageView.widthAnchor.constraint(equalToConstant: windowWidth/2),
+            emptyBoxImageView.heightAnchor.constraint(equalToConstant: windowWidth/2),
+            emptyBoxImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            emptyBoxImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 

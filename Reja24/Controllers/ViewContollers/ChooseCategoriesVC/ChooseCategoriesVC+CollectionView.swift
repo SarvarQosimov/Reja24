@@ -24,17 +24,12 @@ extension ChooseCategoriesVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else { return UICollectionViewCell() }
         
-        if selectedIndexs.contains(indexPath.item) {
-            cell.isSelectedCategory = true
-        } else {
-            cell.isSelectedCategory = false
-        }
-        
         cell.updateCell(
             name: options[indexPath.item].nameCategory ?? "Unnamed",
             color: options[indexPath.item].colorCategory ?? "#000000",
             isFavourity: options[indexPath.item].isFavourity,
-            false, false
+            isSelectAble: true,
+            isSelected: selectedIndexs.contains(indexPath.item)
         )
         
         return cell
@@ -57,7 +52,9 @@ extension ChooseCategoriesVC: UICollectionViewDelegate {
         collectionView.reloadItems(at: [IndexPath(item: indexPath.item, section: 0)])
     }
 }
-
+// completed en
+// flagged
+// tabbar loading remove
 //MARK: UICollectionViewDelegateFlowLayout
 extension ChooseCategoriesVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

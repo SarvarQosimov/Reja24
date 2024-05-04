@@ -20,9 +20,7 @@ extension TasksForTodayTVC {
         openCloseBtn.translatesAutoresizingMaskIntoConstraints = false
         openCloseBtn.setTitle("\(SetLanguage.setLanguage(.tasksForToday)) ⌄", for: .normal)
         openCloseBtn.titleLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
-        
         openCloseBtn.setTitleColor(Constants.textColor, for: .normal)
-        //(.systemBlue, for: .normal)
         openCloseBtn.addTarget(self, action: #selector(openCloseBtnPressed(_:)), for: .touchUpInside)
        
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,7 +39,7 @@ extension TasksForTodayTVC {
     private func addConstraints(){
         NSLayoutConstraint.activate([
             openCloseBtn.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 10),
-            openCloseBtn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
+            openCloseBtn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             openCloseBtn.heightAnchor.constraint(equalToConstant: 30),
             
             tableView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),

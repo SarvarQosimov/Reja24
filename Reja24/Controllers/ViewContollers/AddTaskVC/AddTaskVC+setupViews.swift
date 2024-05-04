@@ -11,15 +11,14 @@ import UIKit
 extension AddTaskVC {
     //MARK: setupViews
     func setupViews(){
-        miniView.backgroundColor = Constants.backgroundColorForMiniView
         
-//        addSubviews()
-        addSubviews(taskTF, noteTextView, priorityLbl, flagImgBtn, stack, addToListBtn, addImgBtn, addedImg)
+        addSubviews(taskTF, noteTextView, priorityLbl, flagImgBtn, stack, addToListBtn, addImgBtn, selectedImsge)
         
+        miniView.backgroundColor = Constants.mainBackgroundColor//backgroundColorForMiniView
         miniView.translatesAutoresizingMaskIntoConstraints = false
         miniView.layer.cornerRadius = 30
         miniView.clipsToBounds = true
-        miniView.layer.borderColor = Constants.textColor.cgColor
+        miniView.layer.borderColor = UIColor.primaryAppColor.cgColor//Constants.textColor.cgColor
         miniView.layer.borderWidth = 3
         
         let blurEffectView = UIVisualEffectView(effect: blur)
@@ -75,7 +74,7 @@ extension AddTaskVC {
         
         priorityLbl.translatesAutoresizingMaskIntoConstraints = false
         priorityLbl.text = SetLanguage.setLanguage(.selectPriority)
-        priorityLbl.font = UIFont(name: "HoeflerText-BlackItalic", size: 19)
+        priorityLbl.font = UIFont(name: Constants.appFont, size: 19) // font black edi
         priorityLbl.textColor = Constants.textColor
         
         flagImgBtn.translatesAutoresizingMaskIntoConstraints = false
@@ -84,26 +83,10 @@ extension AddTaskVC {
         flagImgBtn.addTarget(self, action: #selector(flagPressed(_:)), for: .touchUpInside)
         
         addToListBtn.translatesAutoresizingMaskIntoConstraints = false
-        
-        
         addToListBtn.setImage(UIImage(systemName: "arrow.right.circle"), for: .normal)
-        addToListBtn.tintColor = Constants.textColor
+        addToListBtn.tintColor = .primaryAppColor//Constants.textColor
         
-//        switch SharedMananger.getCurrentMode() {
-//        case .light: 
-//            addToListBtn.setImage(UIImage(named: "addButton"), for: .normal)
-//        case .dark: 
-//            addToListBtn.setImage(UIImage(named: "addButton_forDarkMode"), for: .normal)
-//        case .none:
-//            addToListBtn.setImage(UIImage(named: "addButton"), for: .normal)
-//        }
-        
-//        addToListBtn.setTitle(" \(SetLanguage.setLanguage(.addToList)) ", for: .normal)
-        addToListBtn.titleLabel?.font = UIFont(name: "Menlo-BoldItalic", size: 17)
         addToListBtn.setTitleColor(.white, for: .normal)
-//        addToListBtn.layer.borderColor = UIColor.orange.cgColor
-//        addToListBtn.backgroundColor = #colorLiteral(red: 1, green: 0.6235294118, blue: 0.03921568627, alpha: 0.55)
-//        addToListBtn.layer.borderWidth = 3
         addToListBtn.layer.cornerRadius = 5
         addToListBtn.clipsToBounds = true
         addToListBtn.addTarget(self, action: #selector(addToListPressed(_:)), for: .touchUpInside)
@@ -112,9 +95,9 @@ extension AddTaskVC {
         addImgBtn.setImage(UIImage(systemName: "paperclip"), for: .normal)
         addImgBtn.addTarget(self, action: #selector(selectPhoto(_:)), for: .touchUpInside)
         
-        addedImg.translatesAutoresizingMaskIntoConstraints = false
-        addedImg.layer.cornerRadius = 5
-        addedImg.clipsToBounds = true
+        selectedImsge.translatesAutoresizingMaskIntoConstraints = false
+        selectedImsge.layer.cornerRadius = 5
+        selectedImsge.clipsToBounds = true
         
         setupPriorityBtn()
         addConstraints()
@@ -131,7 +114,7 @@ extension AddTaskVC {
             let btn = UIButton()
             btn.tag = cnt
             btn.setTitleColor(Constants.textColor, for: .normal)
-            btn.titleLabel?.font = UIFont(name: "AmericanTypewriter-Semibold", size: 21)
+            btn.titleLabel?.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
             btn.layer.borderWidth = 3
             btn.layer.cornerRadius = 13
             btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
@@ -173,23 +156,24 @@ extension AddTaskVC {
     private func addConstraints(){
         
         NSLayoutConstraint.activate([
-            miniView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+//            miniView.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             miniView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 33),
             miniView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -33),
             miniView.heightAnchor.constraint(equalToConstant: 400),
+            miniView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150), // yoki 200
             
-            addedImg.topAnchor.constraint(equalTo: miniView.topAnchor, constant: 20),
-            addedImg.leftAnchor.constraint(equalTo: miniView.leftAnchor, constant: 5),
-            addedImg.heightAnchor.constraint(equalToConstant: 30),
-            addedImg.widthAnchor.constraint(equalToConstant: 30),
+            selectedImsge.topAnchor.constraint(equalTo: miniView.topAnchor, constant: 20),
+            selectedImsge.leftAnchor.constraint(equalTo: miniView.leftAnchor, constant: 9),
+            selectedImsge.heightAnchor.constraint(equalToConstant: 30),
+            selectedImsge.widthAnchor.constraint(equalToConstant: 30),
             
-            taskTF.leftAnchor.constraint(equalTo: addedImg.rightAnchor, constant: 5),
-            taskTF.centerYAnchor.constraint(equalTo: addedImg.centerYAnchor),
+            taskTF.leftAnchor.constraint(equalTo: selectedImsge.rightAnchor, constant: 5),
+            taskTF.centerYAnchor.constraint(equalTo: selectedImsge.centerYAnchor),
             taskTF.rightAnchor.constraint(equalTo: addImgBtn.leftAnchor, constant: -5),
             taskTF.heightAnchor.constraint(equalToConstant: 50),
             
             addImgBtn.rightAnchor.constraint(equalTo: miniView.rightAnchor, constant: -3),
-            addImgBtn.topAnchor.constraint(equalTo: addedImg.topAnchor, constant: 0),
+            addImgBtn.topAnchor.constraint(equalTo: selectedImsge.topAnchor, constant: 0),
             addImgBtn.heightAnchor.constraint(equalToConstant: 50),
             addImgBtn.widthAnchor.constraint(equalToConstant: 50),
             

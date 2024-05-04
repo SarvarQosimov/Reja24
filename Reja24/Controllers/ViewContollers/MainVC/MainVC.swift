@@ -22,15 +22,13 @@ class MainVC: UIViewController {
     var tasks         = [TaskDB]()
     let taskViewModel = TasksViewModel()
     var isViewDidLoad = false
-    static var folderChanged: DataChangedDelegate!
     
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupIndecator()
         loader.startAnimating()
-     initBaseSettigs()
-        //TODO: - when category deleted notify to main vc
+        initBaseSettigs()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,8 +57,13 @@ class MainVC: UIViewController {
     
     private func initBaseSettigs(){
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [self] in
-            isViewDidLoad = true
             loader.stopAnimating()
+            isViewDidLoad = true
+            
+            NotificationCenter.default.addObserver(
+                self, selector: #selector(createNewTemplate(_:)), name: .createNewTemplate, object: nil
+            )
+            
             setupViews()
             setupTableView()
         }
@@ -86,7 +89,20 @@ class MainVC: UIViewController {
         }
     }
     
-    //MARK: presentNewFolderAlert
+    @objc func createNewTemplate(_ notification: Notification){ // templateType ni constantas
+        if let userInfo = notification.userInfo, let templateType = userInfo[Constants.TEMPLATE_TYPE_KEY] as? TemplateType {
+            switch templateType {
+            case .category:
+                let vc = CreateNewCategory()
+                vc.index = nil
+                present(vc, animated: true)
+            case .folder:
+                presentNewFolderAlert()
+            }
+        }
+    }
+    
+//    //MARK: presentNewFolderAlert
     func presentNewFolderAlert() {
         let alertController = UIAlertController(title: SetLanguage.setLanguage(.newFolder), message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
@@ -99,10 +115,11 @@ class MainVC: UIViewController {
                     newFolder.name = text
                     folders.append(newFolder)
                     taskViewModel.save()
-                    MainVC.folderChanged.foldersChanged()
+                    NotificationCenter.default.post(name: .folderChanged, object: nil)
                 }
             }
         }
+        
         let cancelAction = UIAlertAction(title: SetLanguage.setLanguage(.cancelBtn), style: .cancel)
         alertController.addAction(createAction)
         alertController.addAction(cancelAction)

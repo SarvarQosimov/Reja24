@@ -15,13 +15,13 @@ extension StartVC {
         addSubviews(img, descreptionLbl, startBtn)
         
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.image = UIImage(named: "categoryBackgroundImg1")
+        img.image = UIImage(named: Constants.note3d_Image)
         img.layer.cornerRadius = 25
         img.clipsToBounds = true
         
         descreptionLbl.translatesAutoresizingMaskIntoConstraints = false
         descreptionLbl.numberOfLines = 0
-        descreptionLbl.font = UIFont(name: "Chalkboard SE", size: 17)
+        descreptionLbl.font = UIFont(name: Constants.appFont, size: 17)
         descreptionLbl.textColor = #colorLiteral(red: 0.5101799369, green: 0.6269689202, blue: 0.7189044356, alpha: 1)
         descreptionLbl.text = SetLanguage.setLanguage(.aboutAppDescription)
         

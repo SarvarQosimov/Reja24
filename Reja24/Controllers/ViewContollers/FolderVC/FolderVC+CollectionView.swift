@@ -19,27 +19,22 @@ extension FolderVC {
 //MARK: UICollectionViewDataSource
 extension FolderVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        categoriesInFolder.count
+        workerCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else { return UICollectionViewCell() }
         
-        if removingCategoriesIndexs.contains(indexPath.row) {
-            cell.updateCell(
-                name: categoriesInFolder[indexPath.item].nameCategory ?? "Unnamed",
-                color: categoriesInFolder[indexPath.item].colorCategory ?? "",
-                isFavourity: categoriesInFolder[indexPath.item].isFavourity,
-                true, isRemoving
-            )
-        } else {
-            cell.updateCell(
-                name: categoriesInFolder[indexPath.item].nameCategory ?? "Unnamed",
-                color: categoriesInFolder[indexPath.item].colorCategory ?? "",
-                isFavourity: categoriesInFolder[indexPath.item].isFavourity,
-                false, isRemoving
-            )
-        }       
+        let currentCell = workerCategories[indexPath.item]
+        let isSelected = removingCategoriesIndexs.contains(indexPath.row)
+        
+        cell.updateCell(
+            name : currentCell.nameCategory ?? "Unnamed",
+            color : currentCell.colorCategory ?? "",
+            isFavourity : currentCell.isFavourity,
+            isSelectAble: isRemoving,
+            isSelected: isSelected
+        )
         
         return cell
         

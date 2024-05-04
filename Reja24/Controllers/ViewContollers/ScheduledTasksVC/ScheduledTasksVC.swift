@@ -12,15 +12,15 @@ class ScheduledTasksVC: UIViewController {
     
     //MARK: Elements
     var tableView: UITableView!
-    var noTasksLbl = UILabel()
+    let emptyBoxImageView = UIImageView()
     
     //MARK: VARIABLES
     let contex = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let taskViewModel    = TasksViewModel()
     var tasks            = [TaskDB]()
-    var dedlineIndex     = [Int]()
+    var deadlineIndex     = [Int]()
     static var delegate: DataChangedDelegate!
-    var tasksWithDedline = [TaskDB]() {
+    var tasksWithDeadline = [TaskDB]() {
         didSet {
             isTasksEmpty()
         }
@@ -48,12 +48,12 @@ class ScheduledTasksVC: UIViewController {
 
     //MARK: sortByDate
     func sortByDate(){
-        tasksWithDedline = []
-        dedlineIndex = []
+        tasksWithDeadline = []
+        deadlineIndex = []
         for i in tasks.enumerated() {
             if !i.element.dedline!.isEmpty {
-                tasksWithDedline.append(i.element)
-                dedlineIndex.append(i.offset)
+                tasksWithDeadline.append(i.element)
+                deadlineIndex.append(i.offset)
             }
         }
         tableView.reloadData()
@@ -61,10 +61,10 @@ class ScheduledTasksVC: UIViewController {
     
     //MARK: isTaskEmpty
     func isTasksEmpty(){
-        if tasksWithDedline.count == 0 {
-            noTasksLbl.isHidden = false
+        if tasksWithDeadline.count == 0 {
+            emptyBoxImageView.isHidden = false
         } else {
-            noTasksLbl.isHidden = true
+            emptyBoxImageView.isHidden = true
         }
     }
 }

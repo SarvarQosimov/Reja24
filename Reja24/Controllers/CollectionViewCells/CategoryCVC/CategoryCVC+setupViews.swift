@@ -16,24 +16,35 @@ extension CategoryCVC {
         
         addSubviews()
         
-        categoryNameLbl.textColor = .brown
-        categoryNameLbl.font = UIFont(name: "Noteworthy Bold", size: 19)
+        categoryNameLbl.textColor = Constants.textColor//.brown
+        categoryNameLbl.font = UIFont(name: Constants.appFont, size: 19)
         categoryNameLbl.numberOfLines = 0
         categoryNameLbl.textAlignment = .center
         categoryNameLbl.translatesAutoresizingMaskIntoConstraints = false
         categoryNameLbl.lineBreakMode = .byCharWrapping
-
+        
+        var favourityImage = UIImage(
+            named: "bookmark_darkMode"
+        )
+        
+        if UserDefaults.standard.string(forKey: Constants.appMode) == "light" {
+            favourityImage = UIImage(named: "bookmark_lightMode")
+        }
         
         favourityBtn.translatesAutoresizingMaskIntoConstraints = false
-        favourityBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        favourityBtn.setImage(favourityImage, for: .normal)
         favourityBtn.tintColor = .blue
         
         selectedCategoryImg.translatesAutoresizingMaskIntoConstraints = false
-        selectedCategoryImg.image = UIImage(systemName: "circle")
+        selectedCategoryImg.image = UIImage(
+            systemName: "circle",
+            withConfiguration: UIImage.SymbolConfiguration(weight: .bold)
+        )
         selectedCategoryImg.isHidden = true
+        selectedCategoryImg.tintColor = .primaryAppColor
+        
         
         addConstraints()
-        
     }
 
     private func addSubviews() {
@@ -45,15 +56,15 @@ extension CategoryCVC {
     
     private func addConstraints() {
         NSLayoutConstraint.activate([
-            categoryNameLbl.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
-            categoryNameLbl.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 5),
+            categoryNameLbl.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -9),
+            categoryNameLbl.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 9),
             categoryNameLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             categoryNameLbl.bottomAnchor.constraint(equalTo: favourityBtn.topAnchor, constant: -3),
             
-            favourityBtn.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -5),
-            favourityBtn.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
-            favourityBtn.heightAnchor.constraint(equalToConstant: 33),
-            favourityBtn.widthAnchor.constraint(equalToConstant: 33),
+            favourityBtn.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -9),
+            favourityBtn.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -11),
+            favourityBtn.heightAnchor.constraint(equalToConstant: 21),
+            favourityBtn.widthAnchor.constraint(equalToConstant: 21),
             
             selectedCategoryImg.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
             selectedCategoryImg.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)

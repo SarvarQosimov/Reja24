@@ -33,7 +33,8 @@ class AllFoldersVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        AllFoldersVC.folderChanged.foldersChanged()
+        NotificationCenter.default.post(name: .folderChanged, object: nil)
+//        AllFoldersVC.folderChanged.foldersChanged()
     }
     
     func editFolder(_ oldName: String, index: Int) {

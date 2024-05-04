@@ -20,7 +20,7 @@ class AddTaskVC: UIViewController {
     var stack                  = UIStackView()
     var priorityButtons        = [UIButton]()
     let addImgBtn              = UIButton()
-    let addedImg               = UIImageView()
+    let selectedImsge               = UIImageView()
     let priorityLbl            = UILabel()
     let flagImgBtn             = UIButton()
     let stackForImgAndFlag     = UIStackView()
@@ -56,7 +56,7 @@ class AddTaskVC: UIViewController {
                 tasks[numOfTask].priority = priority
                 tasks[numOfTask].task = taskTF.text
                 tasks[numOfTask].note = noteTextView.text
-                tasks[numOfTask].image = addedImg.image?.toPngString()
+                tasks[numOfTask].image = selectedImsge.image?.toPngString()
                 tasks[numOfTask].isFlagged = self.isFlagged
             } else {
                 let newTask = TaskDB(context: contex)
@@ -64,7 +64,7 @@ class AddTaskVC: UIViewController {
                  newTask.id = Double(TasksVC.whichCategory)
                  newTask.task = taskTF.text
                  newTask.note = noteTextView.text
-                 newTask.image = addedImg.image?.toPngString()
+                 newTask.image = selectedImsge.image?.toPngString()
                  newTask.isDone = false
                  newTask.dedline = ""
                  newTask.isFlagged = self.isFlagged
@@ -138,7 +138,7 @@ class AddTaskVC: UIViewController {
     ///User editing old task, this function to show old datas about task
     func setEdit(){
         let shouldEdit = AddTaskVC.isEditing.1
-        addedImg.image = shouldEdit.image?.toImage()
+        selectedImsge.image = shouldEdit.image?.toImage()
         taskTF.text = shouldEdit.task
         if let note = shouldEdit.note {
             if note.isEmpty {
@@ -181,7 +181,7 @@ extension AddTaskVC: UIImagePickerControllerDelegate & UINavigationControllerDel
         if image == nil {
             print("nil")
         } else {
-            addedImg.image = image
+            selectedImsge.image = image
         }
         
         dismiss(animated: true)
@@ -200,4 +200,5 @@ extension AddTaskVC: UITextViewDelegate {
             placeholderForTextView.isHidden = true
         }
     }
+    
 }

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     static var primaryAppColor: UIColor {
-        return #colorLiteral(red: 0.2470588237, green: 0.3882353008, blue: 0.5450980663, alpha: 1)
+         return #colorLiteral(red: 0.3490196078, green: 0.4039215686, blue: 0.4509803922, alpha: 1) // 596773 - DarkNeutral500
     }
 }
 
@@ -51,7 +51,6 @@ extension UIColor {
                     r = CGFloat((hexNumber & 0xff0000) >> 16) / 255.0
                     g = CGFloat((hexNumber & 0x00ff00) >> 8) / 255.0
                     b = CGFloat(hexNumber & 0x0000ff) / 255.0
-//                    a = CGFloat(hexNumber & 0x000000ff) / 255
 
                     self.init(red: r, green: g, blue: b, alpha: a)
                     return

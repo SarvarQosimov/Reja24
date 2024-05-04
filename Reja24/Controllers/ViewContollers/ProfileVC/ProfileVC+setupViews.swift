@@ -11,31 +11,39 @@ import UIKit
 extension ProfileVC {
     //MARK: setupViews
     func setupViews(){
+        
         view.backgroundColor = Constants.mainBackgroundColor
-        navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.4701875448, green: 0.8683720231, blue: 0.725059092, alpha: 1)
         
         addSubviews()
         
         topView.translatesAutoresizingMaskIntoConstraints = false
-        topView.backgroundColor = #colorLiteral(red: 0.4701875448, green: 0.8683720231, blue: 0.725059092, alpha: 1)
+        topView.backgroundColor = .primaryAppColor
+        topView.frame = CGRect(
+            x: -50,
+            y: -((windowWidth+150)/2),
+            width: windowWidth+100,
+            height: windowWidth+100
+        )
+        topView.layer.cornerRadius = (windowWidth+100)/2
         
         userImg.translatesAutoresizingMaskIntoConstraints = false
         userImg.tintColor = .brown
         userImg.clipsToBounds = true
-        userImg.image = UIImage(systemName: "person")
+        userImg.image = UIImage(named: "add_user_image")
         let imgTapped = UITapGestureRecognizer(target: self, action: #selector(selectPhoto(_:)))
         imgTapped.numberOfTapsRequired = 1
         userImg.isUserInteractionEnabled = true
         userImg.addGestureRecognizer(imgTapped)
-        
         
         firstNameTF.translatesAutoresizingMaskIntoConstraints = false
         firstNameTF.placeholder = SetLanguage.setLanguage(.firstNamePlaceholder)
         firstNameTF.borderStyle = .roundedRect
         firstNameTF.layer.cornerRadius = 10
         firstNameTF.layer.borderWidth = 1.0
+        firstNameTF.backgroundColor = UIColor(hex: "#B6C2CF")
         firstNameTF.layer.borderColor = UIColor.gray.cgColor
         firstNameTF.clipsToBounds = true
+        
         let toolBarDone = UIToolbar()
         toolBarDone.sizeToFit()
         let btnDone = UIBarButtonItem(title: SetLanguage.setLanguage(.done), image: nil, target: self, action: #selector(doneTF(_:)))
@@ -47,8 +55,10 @@ extension ProfileVC {
         secondNameTF.borderStyle = .roundedRect
         secondNameTF.layer.cornerRadius = 10
         secondNameTF.layer.borderWidth = 1.0
+        secondNameTF.backgroundColor = UIColor(hex: "#B6C2CF")
         secondNameTF.layer.borderColor = UIColor.gray.cgColor
         secondNameTF.clipsToBounds = true
+        
         let toolBarNext = UIToolbar()
         toolBarNext.sizeToFit()
         let btnNext = UIBarButtonItem(title: SetLanguage.setLanguage(.nextBtn), image: nil, target: self, action: #selector(nextTF(_:)))
@@ -60,9 +70,10 @@ extension ProfileVC {
         saveBtn.translatesAutoresizingMaskIntoConstraints = false
         saveBtn.setTitle(SetLanguage.setLanguage(.save), for: .normal)
         saveBtn.setTitleColor(.white, for: .normal)
-        saveBtn.titleLabel?.font = UIFont(name: "Impact", size: 25)
-        saveBtn.backgroundColor = #colorLiteral(red: 0.2745098039, green: 0.2745098039, blue: 0.2745098039, alpha: 1)
-        saveBtn.layer.cornerRadius = 15
+        saveBtn.titleLabel?.font = UIFont(name: Constants.appFont, size: 19)
+        saveBtn.backgroundColor = .primaryAppColor
+        //#colorLiteral(red: 0.2745098039, green: 0.2745098039, blue: 0.2745098039, alpha: 1)
+        saveBtn.layer.cornerRadius = 7
         saveBtn.clipsToBounds = true
         saveBtn.addTarget(self, action: #selector(savePressed(_:)), for: .touchUpInside)
         
@@ -80,15 +91,8 @@ extension ProfileVC {
     
     //MARK: addConstraints
     private func addConstraints(){
-//        let width = view.frame.width
-        topView.layer.cornerRadius = windowWidth/2
         
         NSLayoutConstraint.activate([
-            topView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: -50),
-            topView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 50),
-            topView.topAnchor.constraint(equalTo: view.topAnchor, constant: -windowWidth/2),
-            topView.heightAnchor.constraint(equalToConstant: windowWidth),
-            
             userImg.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             userImg.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             userImg.heightAnchor.constraint(equalToConstant: 100),
@@ -107,7 +111,7 @@ extension ProfileVC {
             saveBtn.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -33),
             saveBtn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 11),
             saveBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -11),
-            saveBtn.heightAnchor.constraint(equalToConstant: 40),
+            saveBtn.heightAnchor.constraint(equalToConstant: 35),
         ])
     }
     

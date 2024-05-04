@@ -19,22 +19,22 @@ extension ScheduledTasksVC {
 //MARK: UITableViewDataSource
 extension ScheduledTasksVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasksWithDedline.count
+        return tasksWithDeadline.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTVC.identifire, for: indexPath) as? TaskTVC else { return UITableViewCell()}
         cell.updateCell(
-            task      : tasksWithDedline[indexPath.row].task!,
-            isDone    : tasksWithDedline[indexPath.row].isDone,
-            priority  : tasksWithDedline[indexPath.row].priority!,
-            dedline   : tasksWithDedline[indexPath.row].dedline!,
-            img       : tasksWithDedline[indexPath.row].image ?? "",
-            isFlagged : tasksWithDedline[indexPath.row].isFlagged
+            task      : tasksWithDeadline[indexPath.row].task!,
+            isDone    : tasksWithDeadline[indexPath.row].isDone,
+            priority  : tasksWithDeadline[indexPath.row].priority!,
+            deadline   : tasksWithDeadline[indexPath.row].dedline!,
+            img       : tasksWithDeadline[indexPath.row].image ?? "",
+            isFlagged : tasksWithDeadline[indexPath.row].isFlagged
         )
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        cell.indexForSchedualed = dedlineIndex[indexPath.row]
+        cell.indexForSchedualed = deadlineIndex[indexPath.row]
         cell.role = .schedualed
         
         return cell
@@ -46,24 +46,24 @@ extension ScheduledTasksVC: UITableViewDelegate {
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         TasksVC.isTaskDetail = true
-        openVcDelegate.openTaskDetailVC(tasksWithDedline[indexPath.row])
+        openVcDelegate.openTaskDetailVC(tasksWithDeadline[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
       
         let delete = UIContextualAction(style: .destructive, title: SetLanguage.setLanguage(.deleteTask)) { [self] _, _, _ in
-            contex.delete(tasksWithDedline[indexPath.row])
-            tasksWithDedline.remove(at: indexPath.row)
+            contex.delete(tasksWithDeadline[indexPath.row])
+            tasksWithDeadline.remove(at: indexPath.row)
             tableView.reloadData()
             taskViewModel.save()
             isTasksEmpty()
         }
         
         let dedline = UIContextualAction(style: .normal, title: SetLanguage.setLanguage(.setDeadline)) { [self] _, _, _ in
-            SetTimer.title = tasksWithDedline[indexPath.row].task!
-            SetTimer.priority = tasksWithDedline[indexPath.row].priority!
-            SetTimer.beforSet = tasksWithDedline[indexPath.row]
-            SetTimer.whichTask = dedlineIndex[indexPath.row]
+            SetTimer.title = tasksWithDeadline[indexPath.row].task!
+            SetTimer.priority = tasksWithDeadline[indexPath.row].priority!
+            SetTimer.beforSet = tasksWithDeadline[indexPath.row]
+            SetTimer.whichTask = deadlineIndex[indexPath.row]
             
             let vc = SetTimer()
             SetTimer.delegate = self
@@ -78,7 +78,7 @@ extension ScheduledTasksVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         
         let edit = UIAction(title: SetLanguage.setLanguage(.editTask)) { [self]_ in
-            AddTaskVC.isEditing = (true,tasksWithDedline[indexPath.row], dedlineIndex[indexPath.row])
+            AddTaskVC.isEditing = (true,tasksWithDeadline[indexPath.row], deadlineIndex[indexPath.row])
             AddTaskVC.delegate = self
             
             let vc = AddTaskVC()

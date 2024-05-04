@@ -26,7 +26,7 @@ enum LanguageType {
     //StartVC
     case aboutAppDescription, getStarted
     //MainVC
-    case homeTitle, categoriesTitle, allBtn, pressPlusForCategoriesMessage, foldersTitle, pressPlusForFoldersMessage, tasksForToday
+    case homeTitle, categoriesTitle, allBtn, pressPlusForCategoriesMessage, foldersTitle, pressPlusForFoldersMessage, tasksForToday, newCategory
     //SettingsVC
     case languageTitle, currentLanguage, darkMode
     //SideMenu
@@ -40,11 +40,11 @@ enum LanguageType {
     //AddNewTaskVC
     case nameOfNewTask, note, selectPriority, high, medium, low, addToList
     //FolderVC
-    case addCategoriesBtn, delete, warningMessage
+    case addCategoriesBtn, delete, warningMessage, noAnyCategory
     //ChooseCategoriesVC
     case addToFolder
     //TaskDetailVC
-    case task, finished
+    case task, finished, notFinished, status
     //SearchTaskVC
     case searchTaskTitle, searchYourTaskPlaceholder
     //ProfileVC

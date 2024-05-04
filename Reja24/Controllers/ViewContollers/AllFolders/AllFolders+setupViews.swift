@@ -23,7 +23,7 @@ extension AllFoldersVC {
         addSubviews()
         
         backgroundImg.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImg.image = UIImage(named: "backgroundLight")
+        backgroundImg.image = UIImage(named: Constants.note3d_Image)
         backgroundImg.layer.cornerRadius = 50
         backgroundImg.clipsToBounds = true
         
@@ -45,7 +45,7 @@ extension AllFoldersVC {
             backgroundImg.widthAnchor.constraint(equalToConstant: 200),
             backgroundImg.heightAnchor.constraint(equalToConstant: 200),
             
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 25),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 35),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 15),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -15),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 50),

@@ -13,7 +13,10 @@ extension MainVC {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(MainTVC.self, forCellReuseIdentifier: MainTVC.identifire)
-        tableView.register(TasksForTodayTVC.self, forCellReuseIdentifier: TasksForTodayTVC.identifire)
+        tableView.register(
+            TasksForTodayTVC.self, 
+            forCellReuseIdentifier: TasksForTodayTVC.identifire
+        )
     }
 }
 
@@ -55,9 +58,9 @@ extension MainVC: UITableViewDataSource {
 extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row ==  0 {
-            return (windowWidth) * 0.5
+            return (windowWidth) * 0.6
         } else if indexPath.row == 1 {
-            return (windowWidth) * 0.4
+            return (windowWidth) * 0.5
         } else {
             return 300
         }

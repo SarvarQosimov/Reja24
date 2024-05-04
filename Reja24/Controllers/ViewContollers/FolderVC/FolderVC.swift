@@ -25,9 +25,9 @@ class FolderVC: UIViewController {
     var selectedIndexs           = [Int]()
     var isRemoving               = false
     var removingCategoriesIndexs = [Int]()
-    var categoriesInFolder       = [CategoryDB]() {
+    var workerCategories       = [CategoryDB]() {
         didSet {
-            if categoriesInFolder.count == 0 {
+            if workerCategories.count == 0 {
                 removeCategoryFromFolderBtn.isHidden = true
             } else {
                 removeCategoryFromFolderBtn.isHidden = false
@@ -38,8 +38,8 @@ class FolderVC: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
         categories = viewModel.fetchCategories()
+        setupViews()
         sortByFolder()
         setupTableView()
     }
@@ -48,6 +48,7 @@ class FolderVC: UIViewController {
     @objc func removeCategoryFromFolderPressed(_ sender: Any){
         if !isRemoving {
             removeCategoryFromFolderBtn.image = nil
+            
             removeCategoryFromFolderBtn.title = SetLanguage.setLanguage(.delete)
             customBackBtn.isHidden = true
             cancleBtn.isHidden = false
@@ -65,6 +66,14 @@ class FolderVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func dismissWithSwipeGesture(_ gesture: UISwipeGestureRecognizer){
+        let xLocation = gesture.location(in: view).x
+        
+        if xLocation < 35 {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
     //MARK: cancelPressed
     @objc func cancelPressed(_ sender: Any){
         isRemoving = false
@@ -78,6 +87,13 @@ class FolderVC: UIViewController {
     
     //MARK: addBtnPressed
     @objc func addBtnPressed(_ sender: Any){
+        
+        guard categories.count > 0 else {
+            let alert = Alert.makeAlertController(SetLanguage.setLanguage(.noAnyCategory))
+            present(alert, animated: true)
+            return
+        }
+        
         let vc = ChooseCategoriesVC()
         var userOptions = [CategoryDB]()
         for i in categories.enumerated() {
@@ -92,12 +108,12 @@ class FolderVC: UIViewController {
     
     //MARK: sortByFolder
     func sortByFolder(){
-        categoriesInFolder = []
+        workerCategories = []
         selectedIndexs = []
         for i in categories.enumerated() {
             for _id in i.element.id! {
                 if "\(_id)" == "\(FolderVC.whichFolder!)" {
-                    categoriesInFolder.append(i.element)
+                    workerCategories.append(i.element)
                     selectedIndexs.append(i.offset)
                     break
                 }
@@ -112,7 +128,7 @@ class FolderVC: UIViewController {
         let action1 = UIAlertAction(title: SetLanguage.setLanguage(.delete), style: .destructive) { [self] deleteAction in
             
             for i in removingCategoriesIndexs {
-                categoriesInFolder[i].id = removeFromFolder(categoriesInFolder[i].id!)
+                workerCategories[i].id = removeFromFolder(workerCategories[i].id!)
             }
             
             sortByFolder()

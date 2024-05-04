@@ -30,6 +30,7 @@ extension SetLanguage {
         case .foldersTitle:                  return "Folders"
         case .pressPlusForFoldersMessage:    return "Press + to add new folder"
         case .tasksForToday:                 return "Tasks for today"
+        case .newCategory:                   return "New category"
             
             ///` SettingsVC
         case .languageTitle:                 return "Language"
@@ -73,13 +74,16 @@ extension SetLanguage {
         case .addCategoriesBtn:              return "Add categories"
         case .delete:                        return "delete"
         case .warningMessage:                return "Do you want to delete categories?"
+        case .noAnyCategory:                 return "You do not have category"
             
             ///` ChooseCategoriesVC
         case .addToFolder:                   return "Add to folder"
             
             ///` TaskDetailVC
         case .task:                          return "Task"
-        case .finished:                      return "Finished"
+        case .finished:                      return "Completed"
+        case .notFinished:                   return "Not completed"
+        case .status:                        return "Status"
             
             ///` SearchTaskVC
         case .searchTaskTitle:               return "Search tasks"

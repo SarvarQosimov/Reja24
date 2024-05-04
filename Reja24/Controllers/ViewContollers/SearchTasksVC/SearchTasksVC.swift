@@ -8,10 +8,10 @@
 import UIKit
 
 class SearchTasksVC: UIViewController {
-    
-    let searchTF         = UITextField()
-    var tableView:         UITableView!
-    var customBackButton = UIBarButtonItem()
+
+    let searchView = UIView()
+    let searchTF = UITextField()
+    var tableView: UITableView!
 
     let contex = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var searchedTasks  = [TaskDB]()
@@ -72,8 +72,7 @@ extension SearchTasksVC: UITextFieldDelegate {
     }
 
     func textFieldDidChangeSelection(_ textField: UITextField) {
-//        textField.text = "  \(textField.text)"
-        serchingText = textField.text ?? ""//String((textField.text ?? "").dropFirst(2))
+        serchingText = textField.text ?? ""
         
         searchedTasks = []
         searchingIndex = []
@@ -93,21 +92,6 @@ extension SearchTasksVC: UITextFieldDelegate {
         
         tableView.reloadData()
     }
-    
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        print("shouldChangeCharactersIn")
-//        
-//        if let currentText = textField.text,
-//           let textRange = Range(range, in: currentText) {
-//            // Append two spaces before the entered text
-//            let newText = "  " + currentText.replacingCharacters(in: textRange, with: string)
-//            // Update the text field's text
-//            textField.text = newText
-//            // Return false to prevent the text from being replaced again by the system
-//            return true //TODO: - false edi
-//        }
-//        
-//        return true
-//    }
+
     
 }

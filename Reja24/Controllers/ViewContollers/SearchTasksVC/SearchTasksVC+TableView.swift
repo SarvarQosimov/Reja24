@@ -29,7 +29,7 @@ extension SearchTasksVC: UITableViewDataSource {
                 task     : searchedTasks[indexPath.row].task!,
                 isDone   : searchedTasks[indexPath.row].isDone,
                 priority : searchedTasks[indexPath.row].priority!,
-                dedline  : searchedTasks[indexPath.row].dedline!,
+                deadline  : searchedTasks[indexPath.row].dedline!,
                 img      : searchedTasks[indexPath.row].image ?? "",
                 isFlagged: searchedTasks[indexPath.row].isFlagged
             )
@@ -46,8 +46,8 @@ extension SearchTasksVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         TasksVC.isTaskDetail = true
-        let vc = TaskDetailVC()
-        vc.updateView(searchedTasks[indexPath.row])
+        let vc = TaskDetailVC(task: searchedTasks[indexPath.row])
+//        vc.updateView(searchedTasks[indexPath.row])
         navigationController?.pushViewController(vc, animated: true)
     }
     

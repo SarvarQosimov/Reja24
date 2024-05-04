@@ -30,6 +30,7 @@ extension SetLanguage {
         case .foldersTitle:                  return "Папки"
         case .pressPlusForFoldersMessage:    return "Hажмите +, чтобы добавить новую папку"
         case .tasksForToday:                 return "Сегодняшние задачи"
+        case .newCategory:                   return "Новая категория"
             
             ///` SettingsVC
         case .languageTitle:                 return "Язык"
@@ -73,6 +74,7 @@ extension SetLanguage {
         case .addCategoriesBtn:              return "Добавить категории"
         case .delete:                        return "удалить"
         case .warningMessage:                return "Хотите удалить категории ?"
+        case .noAnyCategory:                 return "У вас нет категории"
             
             ///` ChooseCategoriesVC
         case .addToFolder:                   return "Добавить в папку"
@@ -80,6 +82,8 @@ extension SetLanguage {
             ///` TaskDetailVC
         case .task:                          return "Задача"
         case .finished:                      return "Завершенный"
+        case .notFinished:                   return "Не завершено"
+        case .status:                        return "Статус"
             
             ///` SearchTaskVC
         case .searchTaskTitle:               return "Поиск задач"

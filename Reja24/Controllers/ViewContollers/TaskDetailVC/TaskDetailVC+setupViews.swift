@@ -9,6 +9,36 @@ import Foundation
 import UIKit
 
 extension TaskDetailVC {
+    //MARK: - test
+    
+    func setupTableView() {
+        view.backgroundColor = .primaryAppColor
+        
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .primaryAppColor
+        tableView.dataSource = self
+        tableView.register(
+            TaskDetail_ImageTVC.self, forCellReuseIdentifier: "TaskDetail_Image"
+        )
+        tableView.register(
+            TaskDetail_AssignmentTVC.self, forCellReuseIdentifier: "TaskDetail_AssignmentTVC"
+        )
+        tableView.register(
+            TaskDetail_TaskStatusTVC.self, forCellReuseIdentifier: "TaskDetail_TaskStatusTVC"
+        )
+      
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 45),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15),
+          
+        ])
+    }
+    
+    
+    
     func setupViews(){
         view.backgroundColor = Constants.mainBackgroundColor
         
@@ -19,13 +49,13 @@ extension TaskDetailVC {
         taskImage.clipsToBounds = true
 
         taskLbl.translatesAutoresizingMaskIntoConstraints = false
-        taskLbl.font = UIFont(name: "Palatino-BoldItalic", size: 21)
+        taskLbl.font = UIFont(name: Constants.appFont + " Semibold", size: 21)
         taskLbl.text = "\(SetLanguage.setLanguage(.task)):"
         taskLbl.textColor = Constants.textColor
         taskLbl.textAlignment = .center
         
         taskName.translatesAutoresizingMaskIntoConstraints = false
-        taskName.font = UIFont(name: "Futura-MediumItalic", size: 21)
+        taskName.font = UIFont(name: Constants.appFont, size: 21)
         taskName.textColor = Constants.textColor
         taskName.numberOfLines = 0
         taskName.layer.cornerRadius = 10
@@ -41,13 +71,13 @@ extension TaskDetailVC {
         stack1.distribution = .fillProportionally
         
         noteLbl.translatesAutoresizingMaskIntoConstraints = false
-        noteLbl.font = UIFont(name: "Palatino-BoldItalic", size: 19)
+        noteLbl.font = UIFont(name: Constants.appFont, size: 19)
         noteLbl.text = "\(SetLanguage.setLanguage(.note)):"
         noteLbl.textColor = Constants.textColor
         noteLbl.textAlignment = .center
         
         note.translatesAutoresizingMaskIntoConstraints = false
-        note.font = UIFont(name: "AmericanTypewriter-Condensed", size: 19)
+        note.font = UIFont(name: Constants.appFont, size: 19)
         note.textColor = #colorLiteral(red: 0.4756349325, green: 0.4756467342, blue: 0.4756404161, alpha: 1)
         note.numberOfLines = 0
         
@@ -68,16 +98,12 @@ extension TaskDetailVC {
         doneLbl.translatesAutoresizingMaskIntoConstraints = false
         doneLbl.text = SetLanguage.setLanguage(.finished)
         doneLbl.textColor = Constants.textColor
-        doneLbl.font = UIFont(name: "Psychedelic-Regular", size: 21)
+        doneLbl.font = UIFont(name: Constants.appFont, size: 21)
         
         isDone.translatesAutoresizingMaskIntoConstraints = false
         isDone.isEnabled = false
         
-        datePicker.translatesAutoresizingMaskIntoConstraints = false
-        datePicker.datePickerMode = .dateAndTime
-        datePicker.backgroundColor = .lightText
-        datePicker.layer.cornerRadius = 10
-        datePicker.clipsToBounds = true
+        
         
         addConstraints()
     }
@@ -112,6 +138,7 @@ extension TaskDetailVC {
             datePicker.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
-
     
 }
+
+

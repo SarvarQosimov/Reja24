@@ -15,8 +15,6 @@ class CategoryCVC: UICollectionViewCell {
     var favourityBtn        = UIButton()
     
     static let identifier: String = String(describing: CategoryCVC.self)
-    ///Is user selecting categories to add specific folder
-    var isSelectedCategory = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,32 +26,34 @@ class CategoryCVC: UICollectionViewCell {
     }
     
     //MARK: updateCell
-    func updateCell(name: String, color: String, isFavourity: Bool, _ isSelectedCategoryInFolder: Bool, _ isRemoving: Bool){
+    func updateCell(name: String, color: String, isFavourity: Bool, isSelectAble: Bool, isSelected: Bool = false){
         let backColor = UIColor(hex: color)
-        contentView.backgroundColor =  backColor?.withAlphaComponent(0.25)
-        if isSelectedCategory {
-            contentView.layer.borderColor = Constants.textColor.cgColor
-            contentView.layer.borderWidth = 7
-        } else {
-            contentView.layer.borderColor = UIColor.init(hex: color)?.cgColor
-            contentView.layer.borderWidth = 5
-        }
+        contentView.backgroundColor =  Constants.mainBackgroundColor
         
-        // category is selected to remove from folder
-        if isRemoving {
+        if isSelectAble {
             selectedCategoryImg.isHidden = false
             
-            if isSelectedCategoryInFolder {
-                selectedCategoryImg.image = UIImage(systemName: "checkmark")
+            if isSelected {
+                selectedCategoryImg.image = UIImage(
+                    systemName: "checkmark",
+                    withConfiguration: UIImage.SymbolConfiguration(weight: .bold)
+                )
+                
+                
             } else {
-                selectedCategoryImg.image = UIImage(systemName: "circle")
+                selectedCategoryImg.image = UIImage(
+                    systemName: "circle",
+                    withConfiguration: UIImage.SymbolConfiguration(weight: .bold)
+                )
             }
             
         } else {
             selectedCategoryImg.isHidden = true
-            selectedCategoryImg.image = UIImage(systemName: "circle")
         }
-
+        
+        contentView.layer.borderColor = UIColor.init(hex: color)?.cgColor
+        contentView.layer.borderWidth = 3
+        
         if isFavourity {
             favourityBtn.isHidden = false
         } else {
